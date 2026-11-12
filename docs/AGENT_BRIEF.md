@@ -588,3 +588,7 @@ Her faz sonunda raporda: değişen dosyalar, kabul kriterleri ✅/❌, doğrulan
 | D-132 | Uygulama test hostu olarak açıldığında (`XCTestConfigurationFilePath` ortam değişkeni) `applicationDidFinishLaunching` hiçbir servisi başlatmaz; testler donanıma dokunmaz. |
 | D-133 | Monitör tespiti `CGGetOnlineDisplayList` + vendor 13924 / model 9984 ile (CADisplay değil). Monitör yokken profil uygulanmaz, boş denemeler olmaz. |
 | D-129 | Renk yönetimi kullanıcı onayıyla **açıldı** (12 Kasım 2026). Test: Limited moddan açılışta RGB Full'a dönüş ✅, döngü yok ✅, 60 Hz korunuyor ✅. |
+
+## 18. Bekleyen istekler (kullanıcıdan)
+
+- **Mouse makroları / yan tuşlar (13 Kasım 2026):** ROG Gladius II'nin yanındaki iki tuş Windows'ta ileri/geri yapıyordu; macOS'ta da aynısı istenir (tarayıcı, Finder, Xcode vb. her yerde Geri/İleri). İleride genel makro desteği: her tuşa kısayol, uygulamaya göre farklı atama. Uygulama fikri: `CGEventTap` ile `otherMouseDown` (buttonNumber 3 = geri, 4 = ileri) yakalanır, ön plandaki uygulamaya ⌘[ / ⌘] gönderilir ve orijinal olay yutulur; Mouse sekmesine "Yan tuşlar" bölümü (atama seçici + açık/kapa). Tuş numaraları donanımda doğrulanmalı (okuma serbest). Mevcut `ScrollReverser` event tap'i ve Erişilebilirlik izni yeniden kullanılabilir.
