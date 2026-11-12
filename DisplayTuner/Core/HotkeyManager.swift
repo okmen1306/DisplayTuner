@@ -46,7 +46,7 @@ final class HotkeyManager {
         for (index, key) in digitKeys.enumerated() {
             register(keyCode: key) {
                 services.profiles.select(index: index)
-                if let name = services.profiles.active?.name { services.notifier.hud(symbol: "sun.max.fill", text: name) }
+                if let name = services.profiles.active?.displayName { services.notifier.hud(symbol: "sun.max.fill", text: name) }
             }
         }
         register(keyCode: kVK_ANSI_E) {

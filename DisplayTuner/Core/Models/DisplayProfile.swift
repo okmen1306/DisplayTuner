@@ -15,6 +15,11 @@ struct DisplayProfile: Codable, Identifiable, Equatable, Sendable {
 
     var id = UUID()
     var name: String
+
+    /// Gösterilen ad: içe aktarılan kayıtlı profil adı dile göre çevrilir (veride Türkçe saklanır).
+    var displayName: String {
+        name == BaselineImporter.profileName ? String(localized: "Masa (Kayıtlı)") : name
+    }
     /// Kayıtlı tablo varsa birebir yüklenir; yoksa `adjustments`'tan hesaplanır (D-38).
     var gammaTable: [[Float]]?          // [red, green, blue]
     var adjustments: ColorAdjustments = .identity

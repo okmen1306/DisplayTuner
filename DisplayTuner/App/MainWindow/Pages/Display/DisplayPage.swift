@@ -80,7 +80,7 @@ struct DisplayPage: View {
                     profiles.isColorManagementEnabled = $0
                 }))
             } footer: {
-                Text("Açıkken monitör her bağlandığında RGB Full'a alınır ve aktif profil (\(profiles.active?.name ?? "—")) uygulanır.")
+                Text("Açıkken monitör her bağlandığında RGB Full'a alınır ve aktif profil (\(profiles.active?.displayName ?? "—")) uygulanır.")
             }
 
             ProfilesSection(profiles: profiles)

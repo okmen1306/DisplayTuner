@@ -25,12 +25,12 @@ struct ProfilesSection: View {
                             renaming = nil
                         })
                     } else {
-                        Text(profile.name)
+                        Text(profile.displayName)
                     }
                     Spacer()
                     if index < 4 { Text("⌃⌥\(index + 1)").font(.caption.monospaced()).foregroundStyle(.secondary) }
                     Menu {
-                        Button("Yeniden Adlandır") { newName = profile.name; renaming = profile.id }
+                        Button("Yeniden Adlandır") { newName = profile.displayName; renaming = profile.id }
                         Button("Sil", role: .destructive) { profiles.delete(profile.id) }
                             .disabled(profiles.profiles.count < 2)
                     } label: { Image(systemName: "ellipsis.circle") }

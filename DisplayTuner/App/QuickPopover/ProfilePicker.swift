@@ -16,7 +16,7 @@ struct ProfilePicker: View {
             VStack(alignment: .leading, spacing: Theme.Spacing.xs) {
                 Text("Profil").font(.subheadline.weight(.semibold))
                 Picker("Profil", selection: Binding(get: { profiles.activeID }, set: { if let id = $0 { profiles.select(id) } })) {
-                    ForEach(profiles.profiles) { Text($0.name).tag(Optional($0.id)) }
+                    ForEach(profiles.profiles) { Text($0.displayName).tag(Optional($0.id)) }
                 }
                 .pickerStyle(.segmented)
                 .labelsHidden()
