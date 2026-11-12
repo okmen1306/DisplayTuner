@@ -75,6 +75,11 @@ DisplayTuner replaces a pile of separate apps (BetterDisplay, LinearMouse, Razer
 
 Device IDs are currently written in the code. Other devices will not be detected, and other monitors only get the general display features.
 
+## Download
+
+Get the latest `.zip` from [Releases](https://github.com/okmen1306/DisplayTuner/releases), unzip it and move **DisplayTuner.app** to `/Applications`.
+The app is not notarized by Apple, so the first time **right-click → Open**, or run `xattr -dr com.apple.quarantine /Applications/DisplayTuner.app`.
+
 ## Build and install
 
 Requirements: an Apple Silicon Mac, macOS 15 or later, and Xcode 16 or later.

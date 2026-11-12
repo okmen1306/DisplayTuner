@@ -75,6 +75,11 @@ DisplayTuner; BetterDisplay, LinearMouse, Razer Synapse, ASUS Armoury Crate ve k
 
 Cihaz kimlikleri şu an koda sabit yazılı. Başka cihazlar algılanmaz; başka monitörlerde yalnızca genel ekran özellikleri çalışır.
 
+## İndir
+
+En son `.zip` dosyasını [Releases](https://github.com/okmen1306/DisplayTuner/releases) sayfasından indir, aç ve **DisplayTuner.app**'i `/Applications` klasörüne taşı.
+Uygulama Apple tarafından onaylanmadığı için ilk açılışta **sağ tık → Aç** yap ya da `xattr -dr com.apple.quarantine /Applications/DisplayTuner.app` komutunu çalıştır.
+
 ## Derleme ve kurulum
 
 Gereksinimler: Apple Silicon Mac, macOS 15 veya üstü, Xcode 16 veya üstü.
