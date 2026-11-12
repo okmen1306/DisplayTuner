@@ -15,7 +15,6 @@ final class StatusItemController: NSObject {
     private let popover = NSPopover()
     private let brightness = BrightnessModel()
     private let mainWindow: MainWindowController
-    private var pendingSingleClick: Task<Void, Never>?
 
     private let notifier: Notifier
 
@@ -25,6 +24,8 @@ final class StatusItemController: NSObject {
         super.init()
 
         popover.behavior = .transient
+        // Parlaklık değerleri önceden okunur; popover ilk açılışta boş/zıplayan içerikle gelmez (D-154).
+        Task { [brightness] in await brightness.load() }
         popover.animates = true
         popover.contentViewController = NSHostingController(
             rootView: QuickPopoverView(brightness: brightness, batteries: services.batteries, profiles: services.profiles,
@@ -41,31 +42,26 @@ final class StatusItemController: NSObject {
             button.image = NSImage(systemSymbolName: "sun.max.fill", accessibilityDescription: "DisplayTuner")
             button.target = self
             button.action = #selector(handleClick(_:))
-            button.sendAction(on: [.leftMouseUp, .rightMouseUp])
+            button.sendAction(on: [.leftMouseDown, .rightMouseDown])
         }
     }
 
     /// D-21: tek tık popover, çift tık pencere, sağ tık menü.
+    /// D-154: popover ilk tıkta (mouse down) hemen açılır; çift tıkı beklemek ~0,5 sn gecikme yaratıyordu.
+    /// İkinci tık gelirse popover kapanır ve ana pencere açılır.
     @objc private func handleClick(_ sender: NSStatusBarButton) {
         guard let event = NSApp.currentEvent else { return }
-        if event.type == .rightMouseUp || event.modifierFlags.contains(.control) {
-            pendingSingleClick?.cancel()
+        if event.type == .rightMouseDown || event.modifierFlags.contains(.control) {
+            popover.performClose(nil)
             showMenu()
             return
         }
         if event.clickCount >= 2 {
-            pendingSingleClick?.cancel()
             popover.performClose(nil)
             mainWindow.show()
             return
         }
-        // İkinci tık gelmezse doubleClickInterval sonunda popover açılır.
-        pendingSingleClick?.cancel()
-        pendingSingleClick = Task { [weak self] in
-            try? await Task.sleep(for: .seconds(NSEvent.doubleClickInterval))
-            guard !Task.isCancelled else { return }
-            self?.togglePopover()
-        }
+        togglePopover()
     }
 
     private func togglePopover() {
