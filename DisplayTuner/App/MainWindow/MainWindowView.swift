@@ -38,6 +38,8 @@ struct MainWindowView: View {
             SidebarView(selection: $state.selection)
         } detail: {
             detail(for: state.selection ?? .display)
+                .scrollContentBackground(.hidden)
+                .background { PageBackground(tint: (state.selection ?? .display).color) }
                 .navigationTitle(Text((state.selection ?? .display).title))
                 // Cihaz sayfaları açıkken durum 5 sn'de bir yenilenir (kapanan/çıkarılan cihaz hemen görünür).
                 .task(id: state.selection) {
@@ -64,6 +66,7 @@ struct MainWindowView: View {
         case .keyboard: KeyboardPage(services: services)
         case .notifications: NotificationsPage(services: services)
         case .automation: AutomationPage(services: services)
+        case .settings: SettingsPage()
         default: placeholder(for: item)
         }
     }

@@ -15,23 +15,20 @@ struct MouseDevicePage: View {
     @State private var save: Task<Void, Never>?
 
     private static let zoneNames: [(UInt8, LocalizedStringKey)] = [(0, "Logo"), (1, "Tekerlek")]
-    private static let modes: [(UInt8, String)] = [(0x00, "Sabit"), (0x01, "Nefes"), (0x02, "Renk döngüsü"),
-                                                  (0x04, "Tepki"), (0x06, "Pil durumu"), (0xF0, "Kapalı")]
+    private static let modes: [(UInt8, String)] = [(0x00, String(localized: "Sabit")), (0x01, String(localized: "Nefes")), (0x02, String(localized: "Renk döngüsü")),
+                                                  (0x04, String(localized: "Tepki")), (0x06, String(localized: "Pil durumu")), (0xF0, String(localized: "Kapalı"))]
 
     var body: some View {
         Form {
             Section {
-                HStack(spacing: Theme.Spacing.l) {
-                    let state = services.batteries.states[.mouse]
-                    BatteryRing(percent: state?.percent, symbol: "computermouse.fill", label: "Pil",
-                                isCharging: state?.isCharging ?? false, size: 64)
-                        .opacity(state?.isStale == true ? 0.5 : 1)
-                    VStack(alignment: .leading, spacing: Theme.Spacing.xs) {
-                        Text("ROG Gladius II Wireless").font(.title3.weight(.semibold))
-                        Text("Pil %25'lik adımlarla raporlanır").font(.caption).foregroundStyle(.secondary)
-                    }
-                }
-                .padding(.vertical, Theme.Spacing.s)
+                let state = services.batteries.states[.mouse]
+                DeviceHero(title: "ROG Gladius II Wireless",
+                           subtitle: state == nil ? String(localized: "Bağlı değil") : String(localized: "Bağlı"),
+                           detail: String(localized: "Pil %25'lik adımlarla raporlanır"),
+                           symbol: "computermouse.fill", tint: .indigo, percent: state?.percent,
+                           isCharging: state?.isCharging ?? false, isStale: state?.isStale ?? false,
+                           connected: state != nil)
+                    .heroRow()
             }
             ForEach(Self.zoneNames, id: \.0) { zone, name in
                 if let lighting = zones[zone] {

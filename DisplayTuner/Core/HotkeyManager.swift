@@ -52,11 +52,13 @@ final class HotkeyManager {
         register(keyCode: kVK_ANSI_E) {
             Task {
                 guard let headset = services.devices.headset else { return }
-                let order: [RazerEQPreset] = [.flat, .game, .music, .movie, .custom]
-                let current = await headset.readByte(.eqPreset).flatMap(RazerEQPreset.init(rawValue:)) ?? .flat
-                let next = order[((order.firstIndex(of: current) ?? 0) + 1) % order.count]
-                if await headset.write(.eqPreset, [next.rawValue]) {
-                    services.notifier.hud(symbol: "slider.vertical.3", text: "EQ: \(next.title)")
+                let store = services.eq
+                let cycle = HeadsetEQStore.hotkeyCycle
+                let index = store.selectedID.flatMap { cycle.firstIndex(of: $0) } ?? -1
+                guard let next = store.all.first(where: { $0.id == cycle[(index + 1) % cycle.count] }) else { return }
+                if await store.apply(next.bands, to: headset) {
+                    store.select(next.id)
+                    services.notifier.hud(symbol: next.symbol, text: "EQ: \(next.name)")
                 }
             }
         }

@@ -10,18 +10,20 @@ import Foundation
 
 enum NotificationTexts {
     static func lowBatteryTitle(_ kind: DeviceKind, critical: Bool) -> String {
-        if critical { return "Düşük Pil" }
-        return kind == .headset ? "Kulaklık Pili Azalıyor" : "Mouse Pili Azalıyor"
+        if critical { return String(localized: "Düşük Pil") }
+        return kind == .headset ? String(localized: "Kulaklık Pili Azalıyor") : String(localized: "Mouse Pili Azalıyor")
     }
 
     static func lowBatteryBody(name: String, percent: Int, critical: Bool, kind: DeviceKind) -> String {
         if critical {
-            if percent <= 0 { return "\(name)'nin pili bitmek üzere." }
-            return "\(name)'de %\(percent) pil kaldı. \(kind == .headset ? "Kulaklığınızı" : "Mouse'unuzu") şarj edin."
+            if percent <= 0 { return String(localized: "\(name)'nin pili bitmek üzere.") }
+            return kind == .headset
+                ? String(localized: "\(name)'de %\(percent) pil kaldı. Kulaklığınızı şarj edin.")
+                : String(localized: "\(name)'de %\(percent) pil kaldı. Mouse'unuzu şarj edin.")
         }
-        return "\(name)'de %\(percent) pil kaldı."
+        return String(localized: "\(name)'de %\(percent) pil kaldı.")
     }
 
-    static let fullyChargedTitle = "Şarj Tamamlandı"
-    static func fullyChargedBody(name: String) -> String { "\(name) tamamen şarj oldu." }
+    static var fullyChargedTitle: String { String(localized: "Şarj Tamamlandı") }
+    static func fullyChargedBody(name: String) -> String { String(localized: "\(name) tamamen şarj oldu.") }
 }

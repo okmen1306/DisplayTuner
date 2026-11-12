@@ -17,26 +17,26 @@ enum PusatEffect: UInt8, CaseIterable, Sendable, Identifiable {
 
     var title: String {
         switch self {
-        case .horizontalWave: "Yatay dalga"
-        case .pulse: "Nabız"
-        case .hurricane: "Kasırga"
-        case .breathingColor: "Renkli nefes"
-        case .breathing: "Nefes"
-        case .fixed: "Sabit"
-        case .reactiveSingle: "Tepki (tek tuş)"
-        case .reactiveRipple: "Tepki (dalgalanma)"
-        case .reactiveHorizontal: "Tepki (yatay)"
-        case .waterfall: "Şelale"
-        case .swirl: "Girdap"
-        case .verticalWave: "Dikey dalga"
-        case .sine: "Sinüs"
-        case .vortex: "Vorteks"
-        case .rain: "Yağmur"
-        case .diagonalWave: "Çapraz dalga"
-        case .reactiveColor: "Renkli tepki"
-        case .ripple: "Dalgalanma"
-        case .off: "Kapalı"
-        case .custom: "Özel"
+        case .horizontalWave: String(localized: "Yatay dalga")
+        case .pulse: String(localized: "Nabız")
+        case .hurricane: String(localized: "Kasırga")
+        case .breathingColor: String(localized: "Renkli nefes")
+        case .breathing: String(localized: "Nefes")
+        case .fixed: String(localized: "Sabit")
+        case .reactiveSingle: String(localized: "Tepki (tek tuş)")
+        case .reactiveRipple: String(localized: "Tepki (dalgalanma)")
+        case .reactiveHorizontal: String(localized: "Tepki (yatay)")
+        case .waterfall: String(localized: "Şelale")
+        case .swirl: String(localized: "Girdap")
+        case .verticalWave: String(localized: "Dikey dalga")
+        case .sine: String(localized: "Sinüs")
+        case .vortex: String(localized: "Vorteks")
+        case .rain: String(localized: "Yağmur")
+        case .diagonalWave: String(localized: "Çapraz dalga")
+        case .reactiveColor: String(localized: "Renkli tepki")
+        case .ripple: String(localized: "Dalgalanma")
+        case .off: String(localized: "Kapalı")
+        case .custom: String(localized: "Özel")
         }
     }
 

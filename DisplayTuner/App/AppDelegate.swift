@@ -27,6 +27,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         // Testlerde uygulama test hostu olarak açılır; donanıma dokunmasın (D-132).
         guard ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] == nil else { return }
+        AppAppearance.apply()
         notifier.start()
         batteries.onThreshold = { [weak self] kind, name, percent, threshold in
             self?.notifier.batteryThreshold(kind: kind, name: name, percent: percent, threshold: threshold)
@@ -57,6 +58,23 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             Task { await profiles.apply(profile) }   // Açılışta bir kez tam uygulama (mod koşulsuz, D-127).
         }
         settings.applyDefaultsOnFirstLaunch()
+        openPageFromLaunchArgument()
+    }
+
+    /// Geliştirme/ekran görüntüsü için: `open DisplayTuner.app --args -DTOpenPage mouse` ana pencereyi o sayfada açar.
+    private func openPageFromLaunchArgument() {
+        let name = UserDefaults.standard.string(forKey: "DTOpenPage") ?? ""
+        let pages: [String: SidebarItem] = [
+            "display": .display, "mouse": .mouse, "devices": .devices, "headset": .headset,
+            "mouseDevice": .mouseDevice, "keyboard": .keyboard, "automation": .automation, "notifications": .notifications, "settings": .settings,
+        ]
+        if let item = pages[name] { mainWindow.show(item) }
+        if let path = UserDefaults.standard.string(forKey: "DTSnapshot") {
+            Task { @MainActor in
+                try? await Task.sleep(for: .seconds(6))
+                mainWindow.snapshot(to: path)
+            }
+        }
     }
 
     /// Dock'ta ikon yok (D-07); yeniden açılınca ana pencere gösterilir.

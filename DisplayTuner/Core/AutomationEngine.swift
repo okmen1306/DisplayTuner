@@ -28,7 +28,7 @@ final class AutomationEngine {
             // D-131: `batt` bu Mac'te şarj kontrolünü desteklemiyor ("charging control is not supported");
             // şarj limiti adımı devre dışı. Destek gelirse: BattCLI.setLimit(isDocked ? 80 : 100).
             if isDocked {
-                services.notifier.hud(symbol: "display", text: "Masa Modu")
+                services.notifier.hud(symbol: "display", text: String(localized: "Masa Modu"))
             }
             logger.info("Dock \(isDocked ? "takıldı" : "çıkarıldı", privacy: .public): otomasyon tamam")
         }
@@ -47,7 +47,7 @@ final class AutomationEngine {
                 }
                 if let last = self.lastMicMuted, last != muted {
                     self.services.notifier.hud(symbol: muted ? "mic.slash.fill" : "mic.fill",
-                                               text: muted ? "Mikrofon Kapalı" : "Mikrofon Açık")
+                                               text: muted ? String(localized: "Mikrofon Kapalı") : String(localized: "Mikrofon Açık"))
                 }
                 self.lastMicMuted = muted
             }

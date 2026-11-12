@@ -17,10 +17,10 @@ final class CursorAppearance {
         var id: String { rawValue }
         var title: String {
             switch self {
-            case .system: "Sistem"
-            case .arrow: "Ok"
-            case .boldArrow: "Kalın ok"
-            case .dot: "Nokta"
+            case .system: String(localized: "Sistem")
+            case .arrow: String(localized: "Ok")
+            case .boldArrow: String(localized: "Kalın ok")
+            case .dot: String(localized: "Nokta")
             }
         }
     }

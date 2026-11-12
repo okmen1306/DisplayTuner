@@ -18,12 +18,13 @@ enum SidebarItem: Hashable, Identifiable {
     case keyboard
     case automation
     case notifications
+    case settings
 
     var id: Self { self }
 
     static let primary: [SidebarItem] = [.display, .mouse, .devices]
     static let deviceChildren: [SidebarItem] = [.headset, .mouseDevice, .keyboard]
-    static let secondary: [SidebarItem] = [.automation, .notifications]
+    static let secondary: [SidebarItem] = [.automation, .notifications, .settings]
 
     var title: LocalizedStringKey {
         switch self {
@@ -35,6 +36,7 @@ enum SidebarItem: Hashable, Identifiable {
         case .keyboard: "PUSAT K3 Pro"
         case .automation: "Otomasyon"
         case .notifications: "Bildirimler"
+        case .settings: "Ayarlar"
         }
     }
 
@@ -48,6 +50,7 @@ enum SidebarItem: Hashable, Identifiable {
         case .keyboard: "keyboard.fill"
         case .automation: "gearshape.2.fill"
         case .notifications: "bell.badge.fill"
+        case .settings: "gearshape.fill"
         }
     }
 
@@ -59,6 +62,7 @@ enum SidebarItem: Hashable, Identifiable {
         case .headset, .mouseDevice, .keyboard: .teal
         case .automation: .purple
         case .notifications: .red
+        case .settings: .gray
         }
     }
 
@@ -68,7 +72,7 @@ enum SidebarItem: Hashable, Identifiable {
         case .display: 5
         case .mouse: 4
         case .devices, .headset, .mouseDevice, .keyboard, .notifications: 2
-        case .automation: 6
+        case .automation, .settings: 6
         }
     }
 }

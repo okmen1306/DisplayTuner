@@ -13,6 +13,7 @@ struct DisplayTunerApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
 
     init() {
+        AppLanguage.applyDefaultIfNeeded()   // D-151: ilk açılış İngilizce; kullanıcı seçimi kalıcı.
         // D-130: Yardımcı süreç modu. `DisplayTuner --apply-connection-mode <colorMode> <bitDepth>`
         // Taze süreçte CADisplay güncel olduğu için bağlantı modu burada değiştirilir, sonra çıkılır.
         let args = CommandLine.arguments

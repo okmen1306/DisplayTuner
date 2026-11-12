@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import os
+
+private let eqLogger = Logger(subsystem: "com.muhammed.DisplayTuner", category: "EQ")
 
 actor BlackSharkV2HS: BatteryReporting {
     static let vendorID = 0x1532
@@ -83,13 +86,16 @@ actor BlackSharkV2HS: BatteryReporting {
     /// Yazma: kabul edildiyse cevap verisi `00`.
     @discardableResult
     func write(_ command: RazerCommand, _ parameters: [UInt8], target: RazerTarget = .headset) async -> Bool {
-        guard let reply = await send(command.write, target: target, parameters: parameters), reply.isOK else { return false }
+        let reply = await send(command.write, target: target, parameters: parameters)
+        eqLogger.info("Yazma \(String(format: "%02X", command.write), privacy: .public) [\(parameters.map { String(format: "%02X", $0) }.joined(separator: " "), privacy: .public)] → durum \(reply?.status ?? 0xEE) veri \(reply?.payload.map { String(format: "%02X", $0) }.joined(separator: " ") ?? "-", privacy: .public)")
+        guard let reply, reply.isOK else { return false }
         return reply.payload.first == 0
     }
 
     /// 10 bant, dB (okuma işaretli byte).
     func eqBands() async -> [Int]? {
         guard let reply = await send(RazerCommand.eqBands.rawValue, target: .headset), reply.isOK, reply.payload.count == 10 else { return nil }
+        eqLogger.info("EQ ham: \(reply.payload.map { String(format: "%02X", $0) }.joined(separator: " "), privacy: .public)")
         return reply.payload.map(RazerPacket.decodeEQ)
     }
 
@@ -107,11 +113,11 @@ enum RazerEQPreset: UInt8, CaseIterable, Identifiable {
     var id: UInt8 { rawValue }
     var title: String {
         switch self {
-        case .flat: "Düz"
-        case .game: "Oyun"
-        case .music: "Müzik"
-        case .movie: "Film"
-        case .custom: "Özel"
+        case .flat: String(localized: "Düz")
+        case .game: String(localized: "Oyun")
+        case .music: String(localized: "Müzik")
+        case .movie: String(localized: "Film")
+        case .custom: String(localized: "Özel")
         }
     }
     static let frequencies = ["31", "63", "125", "250", "500", "1K", "2K", "4K", "8K", "16K"]

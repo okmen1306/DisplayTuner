@@ -16,11 +16,11 @@ struct ConnectedDevicesPage: View {
         Form {
             Section {
                 row(.headset, "BlackShark V2 HyperSpeed", present: services.devices.headset != nil,
-                    status: services.batteries.states[.headset].map { "%\($0.percent)" } ?? "Kapalı")
+                    status: services.batteries.states[.headset].map { String(localized: "%\($0.percent)") } ?? String(localized: "Kapalı"))
                 row(.mouseDevice, "ROG Gladius II Wireless", present: services.devices.mouse != nil,
-                    status: services.batteries.states[.mouse].map { "%\($0.percent)" } ?? "—")
+                    status: services.batteries.states[.mouse].map { String(localized: "%\($0.percent)") } ?? "—")
                 row(.keyboard, "PUSAT K3 Pro", present: true,
-                    status: services.devices.keyboard == nil ? "İzin gerekli" : "Bağlı")
+                    status: services.devices.keyboard == nil ? String(localized: "İzin gerekli") : String(localized: "Bağlı"))
             }
         }
         .formStyle(.grouped)
@@ -32,7 +32,7 @@ struct ConnectedDevicesPage: View {
                 SidebarIcon(symbol: item.symbol, color: item.color)
                 Text(name)
                 Spacer()
-                Text(present ? status : "Bağlı değil").foregroundStyle(.secondary)
+                Text(present ? status : String(localized: "Bağlı değil")).foregroundStyle(.secondary)
                 Image(systemName: "chevron.right").foregroundStyle(.tertiary)
             }
             .contentShape(Rectangle())

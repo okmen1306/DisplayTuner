@@ -18,6 +18,7 @@ final class AppServices {
     let pointer = PointerSettings()
     let cursor = CursorService()
     let cursorAppearance = CursorAppearance()
+    let eq = HeadsetEQStore()
 
     init(devices: DeviceRegistry, batteries: BatteryMonitor, notifier: Notifier, profiles: ProfileStore) {
         self.devices = devices

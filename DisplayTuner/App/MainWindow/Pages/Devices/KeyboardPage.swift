@@ -18,6 +18,13 @@ struct KeyboardPage: View {
 
     var body: some View {
         Form {
+            Section {
+                DeviceHero(title: "PUSAT K3 Pro",
+                           subtitle: keyboard == nil ? String(localized: "İzin gerekli") : String(localized: "Bağlı"),
+                           detail: keyboard == nil ? nil : String(localized: "Profil \(activeProfile)"),
+                           symbol: "keyboard.fill", tint: .orange, connected: keyboard != nil)
+                    .heroRow()
+            }
             if keyboard == nil {
                 Section {
                     Label("Klavyeye erişmek için Giriş İzleme izni gerekiyor.", systemImage: "lock.fill")

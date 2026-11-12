@@ -29,6 +29,14 @@ final class MainWindowController: NSObject, NSWindowDelegate {
         window.makeKeyAndOrderFront(nil)
     }
 
+    /// Geliştirme: pencerenin görüntüsünü PNG olarak kaydeder (ekran kaydı izni gerektirmez; README görselleri için).
+    func snapshot(to path: String) {
+        guard let view = window?.contentView?.superview ?? window?.contentView,
+              let rep = view.bitmapImageRepForCachingDisplay(in: view.bounds) else { return }
+        view.cacheDisplay(in: view.bounds, to: rep)
+        try? rep.representation(using: .png, properties: [:])?.write(to: URL(fileURLWithPath: path))
+    }
+
     func windowWillClose(_ notification: Notification) {
         state.colorPanel.close()
         NSApp.setActivationPolicy(.accessory)

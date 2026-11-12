@@ -29,7 +29,7 @@ struct BatteryRing: View {
                     .foregroundStyle(.primary)
             }
             .frame(width: size, height: size)
-            Text(percent.map { "%\($0)" } ?? "—")
+            Text(percent.map { String(localized: "%\($0)") } ?? "—")
                 .font(.caption.monospacedDigit())
                 .contentTransition(.numericText())
             Text(label)
@@ -37,6 +37,6 @@ struct BatteryRing: View {
                 .foregroundStyle(.secondary)
         }
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel("\(label) pil \(percent.map { "yüzde \($0)" } ?? "bilinmiyor")")
+        .accessibilityLabel(percent.map { String(localized: "\(label) pil yüzde \($0)") } ?? String(localized: "\(label) pil bilinmiyor"))
     }
 }

@@ -41,7 +41,7 @@ struct ProfilesSection: View {
             }
             HStack {
                 Button("Aktif Profili Kopyala") {
-                    profiles.duplicateActive(named: "Profil \(profiles.profiles.count + 1)")
+                    profiles.duplicateActive(named: String(localized: "Profil \(profiles.profiles.count + 1)"))
                 }
                 Spacer()
                 Button("Test Desenleri…") { TestPatternWindow.show() }

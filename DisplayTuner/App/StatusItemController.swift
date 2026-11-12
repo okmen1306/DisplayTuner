@@ -80,11 +80,11 @@ final class StatusItemController: NSObject {
 
     private func showMenu() {
         let menu = NSMenu()
-        menu.addItem(withTitle: "Ana Pencereyi Aç", action: #selector(openMainWindow), keyEquivalent: "").target = self
+        menu.addItem(withTitle: String(localized: "Ana Pencereyi Aç"), action: #selector(openMainWindow), keyEquivalent: "").target = self
         // Profiller alt menüsü Faz 5'te eklenecek.
-        menu.addItem(withTitle: "Örnek Bildirimleri Göster", action: #selector(showSampleNotifications), keyEquivalent: "").target = self
+        menu.addItem(withTitle: String(localized: "Örnek Bildirimleri Göster"), action: #selector(showSampleNotifications), keyEquivalent: "").target = self
         menu.addItem(.separator())
-        menu.addItem(withTitle: "DisplayTuner'dan Çık", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
+        menu.addItem(withTitle: String(localized: "DisplayTuner'dan Çık"), action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
         statusItem.menu = menu
         statusItem.button?.performClick(nil)
         statusItem.menu = nil

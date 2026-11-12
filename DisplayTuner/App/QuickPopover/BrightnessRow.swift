@@ -29,7 +29,7 @@ final class BrightnessModel {
         defer { isLoading = false }
         var result: [Row] = []
         if let value = BuiltinBrightness.value {
-            result.append(Row(id: .builtin, name: "Dahili Ekran", value: value, maximum: 1))
+            result.append(Row(id: .builtin, name: String(localized: "Dahili Ekran"), value: value, maximum: 1))
         }
         if let ddc = await DDCService.shared.read(.brightness) {
             result.append(Row(id: .external, name: "PR27R165QC", value: ddc.fraction, maximum: ddc.maximum))
@@ -67,7 +67,7 @@ struct BrightnessRow: View {
             HStack(spacing: Theme.Spacing.s) {
                 Image(systemName: "sun.min.fill").foregroundStyle(.secondary)
                 Slider(value: Binding(get: { row.value }, set: onChange), in: 0...1)
-                    .accessibilityLabel("\(row.name) parlaklığı")
+                    .accessibilityLabel(String(localized: "\(row.name) parlaklığı"))
                 Image(systemName: "sun.max.fill").foregroundStyle(.secondary)
             }
         }

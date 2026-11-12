@@ -13,7 +13,7 @@ struct BatteryStrip: View {
     var onSelect: (SidebarItem) -> Void = { _ in }
 
     var body: some View {
-        let items: [(DeviceKind, String, SidebarItem)] = [(.mouse, "Mouse", .mouseDevice), (.headset, "Kulaklık", .headset)]
+        let items: [(DeviceKind, String, SidebarItem)] = [(.mouse, String(localized: "Mouse"), .mouseDevice), (.headset, String(localized: "Kulaklık"), .headset)]
         HStack(spacing: Theme.Spacing.l) {
             ForEach(items, id: \.0) { kind, label, page in
                 if let state = batteries.states[kind] {
@@ -23,7 +23,7 @@ struct BatteryStrip: View {
                             .contentShape(Rectangle())
                     }
                     .buttonStyle(.plain)
-                    .help("\(label) ayarlarını aç")
+                    .help(String(localized: "\(label) ayarlarını aç"))
                 }
             }
         }

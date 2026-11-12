@@ -14,12 +14,12 @@ enum TestPattern: CaseIterable {
 
     var title: String {
         switch self {
-        case .grayscale: "Gri skala (11 kademe)"
-        case .blackLevel: "Siyah seviyesi (0–10)"
-        case .whiteLevel: "Beyaz seviyesi (245–255)"
-        case .colors: "Doygun renkler"
-        case .gradient: "Gradyan"
-        case .skin: "Ten tonları"
+        case .grayscale: String(localized: "Gri skala (11 kademe)")
+        case .blackLevel: String(localized: "Siyah seviyesi (0–10)")
+        case .whiteLevel: String(localized: "Beyaz seviyesi (245–255)")
+        case .colors: String(localized: "Doygun renkler")
+        case .gradient: String(localized: "Gradyan")
+        case .skin: String(localized: "Ten tonları")
         }
     }
 }

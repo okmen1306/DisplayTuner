@@ -62,7 +62,7 @@ struct DisplayModeControls: View {
         guard let id = target, let current,
               let best = ModeService.bestResolution(for: hz, preferring: current, on: id) else { return }
         apply(best, hz: hz)
-        note = best == current ? nil : "\(hz) Hz için \(best.label) moduna geçildi."
+        note = best == current ? nil : String(localized: "\(hz) Hz için \(best.label) moduna geçildi.")
         reload()
     }
 

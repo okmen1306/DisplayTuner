@@ -73,7 +73,7 @@ struct AutomationPage: View {
         p.arguments = arguments
         try? p.run()
         p.waitUntilExit()
-        legacyMessage = p.terminationStatus == 0 ? "Tamam" : "İşlem başarısız (\(p.terminationStatus))"
+        legacyMessage = p.terminationStatus == 0 ? String(localized: "Tamam") : String(localized: "İşlem başarısız (\(p.terminationStatus))")
         refresh()
     }
 }
