@@ -12,6 +12,8 @@ import SwiftUI
 @Observable
 final class MainWindowState {
     var selection: SidebarItem? = .display
+    /// D-149: sağ renk paneli.
+    let colorPanel = ColorPanelHost()
 }
 
 struct MainWindowView: View {
@@ -19,6 +21,19 @@ struct MainWindowView: View {
     let services: AppServices
 
     var body: some View {
+        HStack(spacing: 0) {
+            split
+            if let edit = state.colorPanel.edit {
+                Divider()
+                ColorSidePanel(edit: edit) { state.colorPanel.close() }
+                    .transition(.move(edge: .trailing).combined(with: .opacity))
+            }
+        }
+        .environment(\.colorPanel, state.colorPanel)
+        .onChange(of: state.selection) { state.colorPanel.close() }
+    }
+
+    private var split: some View {
         NavigationSplitView {
             SidebarView(selection: $state.selection)
         } detail: {

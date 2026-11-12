@@ -6,11 +6,14 @@
 //  Faz: 5  ·  Kararlar: D-40, D-126, D-142, D-144  (bkz. AGENT_BRIEF.md)
 //
 
+import CoreGraphics
 import SwiftUI
 
 struct DisplayModeControls: View {
     let profiles: ProfileStore
     var compact = false
+    /// D-150: nil → PR27R165QC; başka ekran seçilirse onun modları (profile kaydedilmez).
+    var displayID: CGDirectDisplayID? = nil
     @State private var resolutions: [ModeService.Resolution] = []
     @State private var current: ModeService.Resolution?
     @State private var rates: [Int] = []
@@ -25,7 +28,7 @@ struct DisplayModeControls: View {
             } else {
                 Picker("Çözünürlük", selection: Binding(get: { current ?? resolutions[0] }, set: { r in
                     note = nil
-                    profiles.setResolution(r, hz: currentRate ?? 60)
+                    apply(r, hz: currentRate ?? 60)
                     reload()
                 })) {
                     ForEach(resolutions, id: \.self) { Text($0.label).tag($0) }
@@ -39,27 +42,32 @@ struct DisplayModeControls: View {
                     Text(note).font(.caption).foregroundStyle(.secondary)
                 }
                 Toggle("Ana ekran", isOn: Binding(get: { isMain }, set: { on in
-                    ArrangementService.monitorShouldBeMain = on
-                    if let id = ProfileStore.monitorDisplayID {
-                        if on { ArrangementService.makeMain(id) } else { ArrangementService.makeBuiltinMain() }
-                    }
+                    if let target { ArrangementService.setMain(target, on: on) }
                     reload()
                 }))
             }
         }
         .onAppear(perform: reload)
+        .onChange(of: displayID) { reload() }
+    }
+
+    private var target: CGDirectDisplayID? { displayID ?? ProfileStore.monitorDisplayID }
+    private var isMonitor: Bool { target != nil && target == ProfileStore.monitorDisplayID }
+
+    private func apply(_ r: ModeService.Resolution, hz: Int) {
+        if isMonitor { profiles.setResolution(r, hz: hz) } else if let target { _ = ModeService.set(r, hz: hz, on: target) }
     }
 
     private func select(_ hz: Int) {
-        guard let id = ProfileStore.monitorDisplayID, let current,
-              let target = ModeService.bestResolution(for: hz, preferring: current, on: id) else { return }
-        profiles.setResolution(target, hz: hz)
-        note = target == current ? nil : "\(hz) Hz için \(target.label) moduna geçildi."
+        guard let id = target, let current,
+              let best = ModeService.bestResolution(for: hz, preferring: current, on: id) else { return }
+        apply(best, hz: hz)
+        note = best == current ? nil : "\(hz) Hz için \(best.label) moduna geçildi."
         reload()
     }
 
     private func reload() {
-        guard let id = ProfileStore.monitorDisplayID else { resolutions = []; return }
+        guard let id = target else { resolutions = []; return }
         resolutions = ModeService.resolutions(id)
         current = ModeService.currentResolution(id)
         rates = ModeService.allRefreshRates(id)

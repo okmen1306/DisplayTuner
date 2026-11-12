@@ -30,6 +30,7 @@ final class MainWindowController: NSObject, NSWindowDelegate {
     }
 
     func windowWillClose(_ notification: Notification) {
+        state.colorPanel.close()
         NSApp.setActivationPolicy(.accessory)
     }
 
@@ -47,6 +48,14 @@ final class MainWindowController: NSObject, NSWindowDelegate {
         window.delegate = self
         window.contentMinSize = NSSize(width: 720, height: 520)
         window.contentViewController = NSHostingController(rootView: MainWindowView(state: state, services: services))
+        // D-149: renk paneli açılınca pencere sağa doğru genişler, kapanınca eski genişliğe döner.
+        state.colorPanel.onVisibilityChange = { [weak window] visible in
+            guard let window else { return }
+            var frame = window.frame
+            let delta = ColorPanelHost.panelWidth + 1
+            frame.size.width = visible ? frame.width + delta : max(720, frame.width - delta)
+            window.setFrame(frame, display: true, animate: true)
+        }
         window.setFrameAutosaveName("DisplayTunerMainWindow")
         if !window.setFrameUsingName("DisplayTunerMainWindow") { window.center() }
         return window

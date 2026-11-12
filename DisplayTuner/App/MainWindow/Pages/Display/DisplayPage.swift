@@ -6,6 +6,7 @@
 //  Faz: 5  ·  Kararlar: D-30…D-41, D-121, D-126, D-130  (bkz. AGENT_BRIEF.md)
 //
 
+import CoreGraphics
 import SwiftUI
 
 struct DisplayPage: View {
@@ -20,14 +21,59 @@ struct DisplayPage: View {
     @State private var ddc: [DDCService.VCP: DDCService.Value] = [:]
     @State private var ddcWrite: [DDCService.VCP: Task<Void, Never>] = [:]
     @State private var applying = false
+    @State private var displays: [ArrangementService.Display] = []
+    @State private var selectedDisplay: CGDirectDisplayID?
+    @State private var builtinBrightness = 0.5
 
     private static let ddcRows: [(DDCService.VCP, LocalizedStringKey, String)] = [
         (.brightness, "Parlaklık", "sun.max.fill"), (.contrast, "Kontrast", "circle.lefthalf.filled"),
         (.redGain, "Kırmızı kazanç", "r.circle"), (.greenGain, "Yeşil kazanç", "g.circle"), (.blueGain, "Mavi kazanç", "b.circle"),
     ]
 
+    /// Seçili ekran PR27R165QC mi (veya seçim yok)?
+    private var monitorSelected: Bool {
+        guard let selectedDisplay else { return true }
+        return selectedDisplay == ProfileStore.monitorDisplayID
+    }
+
     var body: some View {
         Form {
+            if displays.count > 1 {
+                Section {
+                    Picker("Ekran", selection: $selectedDisplay) {
+                        ForEach(displays) { Text($0.name).tag(Optional($0.id)) }
+                    }
+                    .pickerStyle(.segmented)
+                }
+            }
+            if monitorSelected { monitorContent } else if let selectedDisplay { otherDisplay(selectedDisplay) }
+        }
+        .formStyle(.grouped)
+        .task { await reload() }
+    }
+
+    // MARK: Diğer ekran (MacBook ekranı vb., D-150)
+
+    @ViewBuilder
+    private func otherDisplay(_ id: CGDirectDisplayID) -> some View {
+        Section(displays.first { $0.id == id }?.name ?? "") {
+            if CGDisplayIsBuiltin(id) != 0 {
+                SettingRow(title: "Parlaklık", symbol: "sun.max.fill") {
+                    Slider(value: Binding(get: { builtinBrightness }, set: {
+                        builtinBrightness = $0
+                        BuiltinBrightness.set($0)
+                    }), in: 0...1)
+                    .frame(width: 220)
+                }
+            }
+            DisplayModeControls(profiles: profiles, displayID: id)
+        }
+    }
+
+    // MARK: Monitör
+
+    @ViewBuilder
+    private var monitorContent: some View {
             Section {
                 Toggle("Renk yönetimi", isOn: Binding(get: { managementOn }, set: {
                     managementOn = $0
@@ -45,9 +91,6 @@ struct DisplayPage: View {
                 hardwareSection
                 colorSection
             }
-        }
-        .formStyle(.grouped)
-        .task { await reload() }
     }
 
     // MARK: Bağlantı
@@ -168,6 +211,11 @@ struct DisplayPage: View {
 
     private func reload() async {
         managementOn = profiles.isColorManagementEnabled
+        displays = ArrangementService.displays()
+        if selectedDisplay == nil || !displays.contains(where: { $0.id == selectedDisplay }) {
+            selectedDisplay = ProfileStore.monitorDisplayID ?? displays.first?.id
+        }
+        builtinBrightness = BuiltinBrightness.value ?? 0.5
         if let id = ProfileStore.monitorDisplayID {
             rates = ModeService.refreshRates(id)
             currentRate = ModeService.currentRefreshRate(id)

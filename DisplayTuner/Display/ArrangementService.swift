@@ -6,6 +6,7 @@
 //  Faz: 5  ·  Kararlar: D-41  (bkz. AGENT_BRIEF.md)
 //
 
+import AppKit
 import CoreGraphics
 import Foundation
 import os
@@ -18,6 +19,40 @@ enum ArrangementService {
     static var monitorShouldBeMain: Bool {
         get { UserDefaults.standard.object(forKey: "monitorIsMain") as? Bool ?? true }
         set { UserDefaults.standard.set(newValue, forKey: "monitorIsMain") }
+    }
+
+    struct Display: Hashable, Identifiable {
+        let id: CGDirectDisplayID
+        let name: String
+        var isBuiltin: Bool { CGDisplayIsBuiltin(id) != 0 }
+    }
+
+    /// Bağlı ekranlar (D-150): ana ekran önce, dahili ekran sonra.
+    static func displays() -> [Display] {
+        NSScreen.screens.compactMap { screen -> Display? in
+            guard let number = screen.deviceDescription[NSDeviceDescriptionKey("NSScreenNumber")] as? NSNumber else { return nil }
+            let id = CGDirectDisplayID(number.uint32Value)
+            let name = CGDisplayIsBuiltin(id) != 0 ? String(localized: "MacBook ekranı") : screen.localizedName
+            return Display(id: id, name: name)
+        }
+        .sorted { ($0.isBuiltin ? 1 : 0, $0.name) < ($1.isBuiltin ? 1 : 0, $1.name) }
+    }
+
+    /// Seçilen ekranı ana ekran yapar ve tercihi saklar (monitör takılınca hangisi ana olsun, D-41/D-150).
+    static func setMain(_ id: CGDirectDisplayID, on: Bool) {
+        let monitor = ProfileStore.monitorDisplayID
+        if id == monitor {
+            monitorShouldBeMain = on
+            if on { makeMain(id) } else { makeBuiltinMain() }
+        } else if on {
+            if monitor != nil { monitorShouldBeMain = false }
+            makeMain(id)
+        } else if let monitor {
+            monitorShouldBeMain = true
+            makeMain(monitor)
+        } else {
+            makeBuiltinMain()
+        }
     }
 
     static func isMain(_ id: CGDirectDisplayID) -> Bool { CGDisplayIsMain(id) != 0 }
