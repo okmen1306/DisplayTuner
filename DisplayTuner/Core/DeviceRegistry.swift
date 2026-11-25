@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import IOKit.hid
 
 /// Desteklenen cihazları (Bölüm 3) bulur ve sürücülerini tutar. Sadece bu üç cihaz desteklenir (D-11).
 @MainActor
@@ -25,7 +26,9 @@ final class DeviceRegistry {
             mouse = isPresent(GladiusIIWireless.vendorID, GladiusIIWireless.productID) ? GladiusIIWireless() : nil
         }
         if keyboard == nil || !isPresent(K3Pro.vendorID, K3Pro.productID) {
-            keyboard = isPresent(K3Pro.vendorID, K3Pro.productID) ? K3Pro() : nil
+            // D-159: Giriş İzleme izni yoksa klavyeyi açmaya çalışma; her denemede macOS izin penceresi çıkıyordu.
+            let granted = IOHIDCheckAccess(kIOHIDRequestTypeListenEvent) == kIOHIDAccessTypeGranted
+            keyboard = granted && isPresent(K3Pro.vendorID, K3Pro.productID) ? K3Pro() : nil
         }
     }
 

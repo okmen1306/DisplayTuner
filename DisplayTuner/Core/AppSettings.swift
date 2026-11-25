@@ -32,8 +32,10 @@ final class AppSettings {
     func applyDefaultsOnFirstLaunch() {
         let key = "launchAtLoginWanted"
         if UserDefaults.standard.object(forKey: key) == nil { UserDefaults.standard.set(true, forKey: key) }
+        // D-159: sadece kayıtlı değilse kaydet; her açılışta register() macOS'un "arka plan öğesi eklendi" bildirimini gösteriyordu.
         guard UserDefaults.standard.bool(forKey: key),
-              Bundle.main.bundlePath.hasPrefix("/Applications/") else { return }
+              Bundle.main.bundlePath.hasPrefix("/Applications/"),
+              SMAppService.mainApp.status != .enabled else { return }
         try? SMAppService.mainApp.register()
     }
 }

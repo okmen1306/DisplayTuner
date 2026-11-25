@@ -43,7 +43,7 @@ struct MainWindowView: View {
                 .navigationTitle(Text((state.selection ?? .display).title))
                 // Cihaz sayfaları açıkken durum 5 sn'de bir yenilenir (kapanan/çıkarılan cihaz hemen görünür).
                 .task(id: state.selection) {
-                    let deviceItems: [SidebarItem] = [.devices, .headset, .mouseDevice, .keyboard]
+                    let deviceItems: [SidebarItem] = [.devices, .headset, .mouseDevice, .keyboard, .earbuds]
                     guard let selection = state.selection, deviceItems.contains(selection) else { return }
                     while !Task.isCancelled {
                         await services.batteries.refresh()
@@ -59,7 +59,7 @@ struct MainWindowView: View {
         switch item {
         case .display: DisplayPage(services: services)
         case .mouse: MousePage(reverser: services.scrollReverser, pointer: services.pointer, cursor: services.cursor,
-                               appearance: services.cursorAppearance)
+                               appearance: services.cursorAppearance, buttons: services.mouseButtons)
         case .devices: ConnectedDevicesPage(services: services) { state.selection = $0 }
         case .headset: HeadsetPage(services: services)
         case .mouseDevice: MouseDevicePage(services: services) { state.selection = .mouse }
@@ -67,6 +67,7 @@ struct MainWindowView: View {
         case .notifications: NotificationsPage(services: services)
         case .automation: AutomationPage(services: services)
         case .settings: SettingsPage()
+        case .earbuds: EarbudsPage(eq: services.systemEQ)
         default: placeholder(for: item)
         }
     }

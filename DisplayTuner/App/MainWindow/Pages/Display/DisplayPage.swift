@@ -38,6 +38,7 @@ struct DisplayPage: View {
 
     var body: some View {
         Form {
+            EyeComfortSection(eye: services.eyeComfort)
             if displays.count > 1 {
                 Section {
                     Picker("Ekran", selection: $selectedDisplay) {

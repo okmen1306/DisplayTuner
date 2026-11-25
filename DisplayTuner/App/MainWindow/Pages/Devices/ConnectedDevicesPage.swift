@@ -17,6 +17,10 @@ struct ConnectedDevicesPage: View {
             Section {
                 row(.headset, "BlackShark V2 HyperSpeed", present: services.devices.headset != nil,
                     status: services.batteries.states[.headset].map { String(localized: "%\($0.percent)") } ?? String(localized: "Kapalı"))
+                let bt = services.systemEQ.output
+                row(.earbuds, bt?.isBluetooth == true ? bt!.name : String(localized: "Kablosuz Kulaklık"),
+                    present: bt?.isBluetooth == true,
+                    status: services.systemEQ.isRunning ? String(localized: "EQ açık") : String(localized: "Bağlı"))
                 row(.mouseDevice, "ROG Gladius II Wireless", present: services.devices.mouse != nil,
                     status: services.batteries.states[.mouse].map { String(localized: "%\($0.percent)") } ?? "—")
                 row(.keyboard, "PUSAT K3 Pro", present: true,

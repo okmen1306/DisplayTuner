@@ -56,7 +56,7 @@ final class ColorGuard {
 
     private func checkDrift() {
         guard store.isColorManagementEnabled, let profile = store.active, let id = ProfileStore.monitorDisplayID else { return }
-        let expected = profile.lut(size: GammaEngine.capacity(of: id))
+        let expected = GammaEngine.warmed(profile.lut(size: GammaEngine.capacity(of: id)), for: id)
         let mode = ConnectionModeService.current
         let deviation = GammaEngine.read(id).map {
             LUTMath.maxDeviation(LUTMath.clamped($0), LUTMath.clamped(expected))

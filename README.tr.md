@@ -42,16 +42,21 @@ DisplayTuner; BetterDisplay, LinearMouse, Razer Synapse, ASUS Armoury Crate ve k
 - DDC/CI ile donanım ayarları: parlaklık, kontrast, kırmızı/yeşil/mavi kazanç
 - Yazılımsal renk: gama tablosu (kontrast, gama, parlak alanlar, gölgeler, renk sıcaklığı, kanal kazancı) ve üst katman filtresi (doygunluk, canlılık, ton, sepya)
 - Kısayollu renk profilleri (⌃⌥1 … ⌃⌥4) ve test desenleri
+- Her ekran için **göz konforu** (gece modu): elle, gün batımından gün doğumuna ya da zamanlamayla (⌃⌥N)
 
 ### Kulaklık (Razer BlackShark V2 HyperSpeed)
 - Pil seviyesi ve düşük pil uyarıları
 - Sürüklenebilir eğrili **10 bant EQ**: 14 hazır ayar (Dengeli, Ayak Sesi, Uzak Sesler, Sinematik, Pop, Elektronik, Hip-Hop, Rock, Akustik, Bas Güçlendirme, Film, Konuşma, Gece…). Her biri düzenlenebilir ve **Sıfırla** ile geri alınabilir; kendi ayarlarını da kaydedebilirsin. Hazır ayarlar bu kulaklığın ölçülmüş sesine göre ayarlandı (parlak, bası zayıf). EQ kulaklığın hafızasına yazılır.
 - Kendi sesini duyma (sidetone), otomatik kapanma, dongle ışığı
 
+### Kablosuz kulaklık (her Bluetooth kulaklık)
+- Aynı hazır ayarlarla sistem geneli 10 bant EQ; ses çıkışı Bluetooth kulaklık olunca kendiliğinden açılır
+
 ### Mouse (ASUS ROG Gladius II Wireless)
 - Pil seviyesi, logo ve tekerlek ışığı (efekt, renk, parlaklık)
 - Sadece mouse için ters kaydırma (trackpad doğal kalır), macOS sınırının üstünde imleç hızı, doğrusal hareket (ivme kapalı)
 - İmleç boyutu, şekli ve rengi
+- **Yan tuşlar**: Windows'taki gibi Geri / İleri (ya da Mission Control, masaüstleri, sekmeler); hangi tuşa bastığını canlı gösterir
 
 ### Klavye (PUSAT K3 Pro)
 - Profiller, ışık efekti, parlaklık, hız ve yön

@@ -1,2685 +1,3049 @@
 {
-  "sourceLanguage": "tr",
-  "strings": {
-    "": {},
-    "\"Masa Modu\" bildirimi": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "\"Desk Mode\" notification"
+  "sourceLanguage" : "tr",
+  "strings" : {
+    "" : {
+
+    },
+    "—" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "—"
           }
         }
       }
     },
-    "%%%lld": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld%%"
+    "“%@” ayarını güncelle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update “%@”"
           }
         }
       }
     },
-    "%100 kulaklığın donanım sınırıdır (Synapse'teki en yüksek seviyeyle aynı).": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "100% is the headset hardware limit (same as the highest level in Synapse)."
+    "“%@” ayarını sil" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete “%@”"
           }
         }
       }
     },
-    "%@": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@"
+    "\"Masa Modu\" bildirimi" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\"Desk Mode\" notification"
           }
         }
       }
     },
-    "%@  ·  tıkla: sonraki  ·  ESC: çık": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@  ·  click: next  ·  ESC: exit"
+    "%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
           }
         }
       }
     },
-    "%@ ayarlarını aç": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Open %@ settings"
+    "%@  ·  tıkla: sonraki  ·  ESC: çık" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@  ·  click: next  ·  ESC: exit"
           }
         }
       }
     },
-    "%@ parlaklığı": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@ brightness"
-          }
-        }
-      }
-    },
-    "%@ pil bilinmiyor": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@ battery unknown"
-          }
-        }
-      }
-    },
-    "%@ pil yüzde %lld": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%1$@ battery %2$lld percent"
+    "%@ – %@ arası" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ – %2$@"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "new",
-            "value": "%1$@ pil yüzde %2$lld"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ – %2$@ arası"
           }
         }
       }
     },
-    "%@ tamamen şarj oldu.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@ is fully charged."
-          }
-        }
-      }
-    },
-    "%@ · %lld bit": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%1$@ · %2$lld bit"
+    "%@ · %lld bit" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · %2$lld bit"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "new",
-            "value": "%1$@ · %2$lld bit"
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$lld bit"
           }
         }
       }
     },
-    "%@%lld": {
-      "extractionState": "stale",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%1$@%2$lld"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "new",
-            "value": "%1$@%2$lld"
+    "%@ ayarlarını aç" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open %@ settings"
           }
         }
       }
     },
-    "%@'de %%%lld pil kaldı.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%1$@ has %2$lld%% battery left."
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "new",
-            "value": "%1$@'de %%%2$lld pil kaldı."
+    "%@ parlaklığı" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ brightness"
           }
         }
       }
     },
-    "%@'de %%%lld pil kaldı. Kulaklığınızı şarj edin.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%1$@ has %2$lld%% battery left. Charge your headset."
+    "%@ pil bilinmiyor" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ battery unknown"
+          }
+        }
+      }
+    },
+    "%@ pil yüzde %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ battery %2$lld percent"
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "new",
-            "value": "%1$@'de %%%2$lld pil kaldı. Kulaklığınızı şarj edin."
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ pil yüzde %2$lld"
           }
         }
       }
     },
-    "%@'de %%%lld pil kaldı. Mouse'unuzu şarj edin.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%1$@ has %2$lld%% battery left. Charge your mouse."
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "new",
-            "value": "%1$@'de %%%2$lld pil kaldı. Mouse'unuzu şarj edin."
+    "%@ tamamen şarj oldu." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ is fully charged."
           }
         }
       }
     },
-    "%@'nin pili bitmek üzere.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@'s battery is about to run out."
-          }
-        }
-      }
-    },
-    "%lld": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
-          }
-        }
-      }
-    },
-    "%lld Hz": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld Hz"
-          }
-        }
-      }
-    },
-    "%lld Hz için %@ moduna geçildi.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Switched to %2$@ for %1$lld Hz."
+    "%@'de %%%lld pil kaldı." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ has %2$lld%% battery left."
           }
         },
-        "tr": {
-          "stringUnit": {
-            "state": "new",
-            "value": "%1$lld Hz için %2$@ moduna geçildi."
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@'de %%%2$lld pil kaldı."
           }
         }
       }
     },
-    "%lld dB": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld dB"
+    "%@'de %%%lld pil kaldı. Kulaklığınızı şarj edin." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ has %2$lld%% battery left. Charge your headset."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@'de %%%2$lld pil kaldı. Kulaklığınızı şarj edin."
+          }
+        }
+      }
+    },
+    "%@'de %%%lld pil kaldı. Mouse'unuzu şarj edin." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ has %2$lld%% battery left. Charge your mouse."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@'de %%%2$lld pil kaldı. Mouse'unuzu şarj edin."
+          }
+        }
+      }
+    },
+    "%@'nin pili bitmek üzere." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@'s battery is about to run out."
+          }
+        }
+      }
+    },
+    "%@%lld" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@%2$lld"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@%2$lld"
+          }
+        }
+      }
+    },
+    "%%%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%%"
+          }
+        }
+      }
+    },
+    "%100 kulaklığın donanım sınırıdır (Synapse'teki en yüksek seviyeyle aynı)." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "100% is the headset hardware limit (same as the highest level in Synapse)."
+          }
+        }
+      }
+    },
+    "%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        }
+      }
+    },
+    "%lld dB" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld dB"
+          }
+        }
+      }
+    },
+    "%lld dk" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min"
+          }
+        }
+      }
+    },
+    "%lld Hz" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld Hz"
+          }
+        }
+      }
+    },
+    "%lld Hz için %@ moduna geçildi." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Switched to %2$@ for %1$lld Hz."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld Hz için %2$@ moduna geçildi."
+          }
+        }
+      }
+    },
+    "+%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld"
+          }
+        }
+      }
+    },
+    "+%lld dB" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld dB"
+          }
+        }
+      }
+    },
+    "⌃⌥%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌃⌥%lld"
+          }
+        }
+      }
+    },
+    "⌃⌥1 … ⌃⌥4" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌃⌥1 … ⌃⌥4"
+          }
+        }
+      }
+    },
+    "⌃⌥E" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌃⌥E"
+          }
+        }
+      }
+    },
+    "Açık" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Light"
+          }
+        }
+      }
+    },
+    "Açıkken monitör her bağlandığında RGB Full'a alınır ve aktif profil (%@) uygulanır." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "When on, the monitor is switched to RGB Full and the active profile (%@) is applied every time it connects."
+          }
+        }
+      }
+    },
+    "Açılışta başlat" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Launch at login"
+          }
+        }
+      }
+    },
+    "Ad" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name"
+          }
+        }
+      }
+    },
+    "Aktif profil klavyedeki profil tuşuyla değiştirilir." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The active profile is changed with the profile key on the keyboard."
+          }
+        }
+      }
+    },
+    "Aktif Profili Kopyala" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Duplicate Active Profile"
+          }
+        }
+      }
+    },
+    "Akustik" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acoustic"
+          }
+        }
+      }
+    },
+    "Ana ekran" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Main display"
+          }
+        }
+      }
+    },
+    "Ana Pencereyi Aç" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open Main Window"
+          }
+        }
+      }
+    },
+    "Arka yan tuş" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back side button"
+          }
+        }
+      }
+    },
+    "Ayak Sesi" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Footsteps"
+          }
+        }
+      }
+    },
+    "Ayarım" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My preset"
+          }
+        }
+      }
+    },
+    "Ayarlar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        }
+      }
+    },
+    "Ayarlar için kulaklığı açın." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn on the headset to see its settings."
+          }
+        }
+      }
+    },
+    "Ayarlar…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings…"
+          }
+        }
+      }
+    },
+    "Bağlantı" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connection"
+          }
+        }
+      }
+    },
+    "Bağlantı durumu" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connection status"
+          }
+        }
+      }
+    },
+    "Bağlı" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connected"
+          }
+        }
+      }
+    },
+    "Bağlı Cihazlar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connected Devices"
+          }
+        }
+      }
+    },
+    "Bağlı değil" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not connected"
+          }
         }
       }
     },
-    "%lld dk": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld min"
+    "Bantları değiştirmek için \"Özel\"i seçin." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose \"Custom\" to change the bands."
           }
         }
       }
     },
-    "+%lld": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "+%lld"
+    "Bantları sürükleyerek kendi sesini oluştur." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drag the bands to shape your own sound."
           }
         }
       }
     },
-    "+%lld dB": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "+%lld dB"
+    "Bantları yukarı-aşağı sürükle. Değişiklik kulaklığın hafızasına yazılır; Synapse olmadan da kalır." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drag the bands up or down. Changes are saved to the headset memory and stay without Synapse."
           }
         }
       }
     },
-    "Ad": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Name"
+    "Bas Güçlendirme" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bass Boost"
           }
         }
       }
     },
-    "Aktif Profili Kopyala": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Duplicate Active Profile"
+    "Başlangıç" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
           }
         }
       }
     },
-    "Aktif profil klavyedeki profil tuşuyla değiştirilir.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "The active profile is changed with the profile key on the keyboard."
+    "Benim Ayarlarım" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Presets"
           }
         }
       }
     },
-    "Akustik": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Acoustic"
+    "Beyaz seviyesi (245–255)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "White level (245–255)"
           }
         }
       }
     },
-    "Ana Pencereyi Aç": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Open Main Window"
+    "Bildirimler" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifications"
           }
         }
       }
     },
-    "Ana ekran": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Main display"
+    "Bir HUD, bir sistem bildirimi ve bir kritik uyarı gösterir." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shows a HUD, a system notification and a critical alert."
           }
         }
       }
     },
-    "Ayak Sesi": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Footsteps"
+    "Bir yan tuşa bas: çizimde yanar, hangisi olduğunu görürsün." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Press a side button: it lights up in the drawing so you can see which one it is."
           }
         }
       }
     },
-    "Ayarlar": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Settings"
+    "Bitiş" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "End"
           }
         }
       }
     },
-    "Ayarlar için kulaklığı açın.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Turn on the headset to see its settings."
+    "BlackShark V2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BlackShark V2"
+          }
+        }
+      }
+    },
+    "BlackShark V2 HyperSpeed" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BlackShark V2 HyperSpeed"
+          }
+        }
+      }
+    },
+    "Bluetooth kulaklıkta ekolayzırı kullan" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use the equalizer on Bluetooth headphones"
+          }
+        }
+      }
+    },
+    "Bu ayarlar ekranın üstünde saydam bir katmanla uygulanır; hepsi varsayılandayken katman kapalıdır." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "These settings are applied with a transparent overlay on top of the screen; the overlay is off while all of them are at their defaults."
+          }
+        }
+      }
+    },
+    "Bu sayfa Faz %lld'te eklenecek." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This page will be added in phase %lld."
+          }
+        }
+      }
+    },
+    "Bugün %@ – yarın %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today %1$@ – tomorrow %2$@"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Bugün %1$@ – yarın %2$@"
           }
         }
       }
     },
-    "Ayarlar…": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Settings…"
+    "Çalışıyor" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Running"
           }
         }
       }
     },
-    "Ayarım": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "My preset"
+    "Çalışma şekli" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schedule"
           }
         }
       }
     },
-    "Açık": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Light"
+    "Canlılık" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vibrance"
           }
         }
       }
     },
-    "Açıkken monitör her bağlandığında RGB Full'a alınır ve aktif profil (%@) uygulanır.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "When on, the monitor is switched to RGB Full and the active profile (%@) is applied every time it connects."
+    "Çapraz dalga" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diagonal wave"
           }
         }
       }
     },
-    "Açılışta başlat": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Launch at login"
+    "Çözünürlük" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resolution"
           }
         }
       }
     },
-    "Bantları değiştirmek için \"Özel\"i seçin.": {
-      "extractionState": "stale",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Choose \"Custom\" to change the bands."
+    "Dahili Ekran" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Built-in Display"
           }
         }
       }
     },
-    "Bantları sürükleyerek kendi sesini oluştur.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Drag the bands to shape your own sound."
+    "Dalgalanma" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ripple"
           }
         }
       }
     },
-    "Bantları yukarı-aşağı sürükle. Değişiklik kulaklığın hafızasına yazılır; Synapse olmadan da kalır.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Drag the bands up or down. Changes are saved to the headset memory and stay without Synapse."
+    "Değiştirildi" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modified"
           }
         }
       }
     },
-    "Bas Güçlendirme": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Bass Boost"
+    "Dengeli" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balanced"
           }
         }
       }
     },
-    "Bağlantı": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Connection"
+    "Derin alt bas ve hava; orta bölge geri planda." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deep sub-bass and air; mids sit back."
           }
         }
       }
     },
-    "Bağlantı durumu": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Connection status"
+    "Dikey dalga" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vertical wave"
           }
         }
       }
     },
-    "Bağlı": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Connected"
+    "Dil" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Language"
           }
         }
       }
     },
-    "Bağlı Cihazlar": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Connected Devices"
+    "Dil / Language" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Language / Dil"
           }
         }
       }
     },
-    "Bağlı değil": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Not connected"
+    "Dil değişince uygulama yeniden başlar." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The app restarts when the language changes."
           }
         }
       }
     },
-    "Benim Ayarlarım": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "My Presets"
+    "DisplayTuner" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DisplayTuner"
           }
         }
       }
     },
-    "Beyaz seviyesi (245–255)": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "White level (245–255)"
+    "DisplayTuner bu script'in işlerini devraldı. Script silinmez, sadece durdurulur." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DisplayTuner has taken over this script's jobs. The script is not deleted, only stopped."
           }
         }
       }
     },
-    "Bildirimler": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Notifications"
+    "DisplayTuner'dan Çık" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quit DisplayTuner"
           }
         }
       }
     },
-    "Bir HUD, bir sistem bildirimi ve bir kritik uyarı gösterir.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Shows a HUD, a system notification and a critical alert."
+    "Dock takılınca" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "When the dock is connected"
           }
         }
       }
     },
-    "BlackShark V2": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "BlackShark V2"
+    "Doğal enstrüman tınısı, sıcak orta bölge." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Natural instrument timbre, warm mids."
           }
         }
       }
     },
-    "BlackShark V2 HyperSpeed": {
-      "extractionState": "stale",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "BlackShark V2 HyperSpeed"
+    "Dolgu rengi" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fill color"
           }
         }
       }
     },
-    "Bu ayarlar ekranın üstünde saydam bir katmanla uygulanır; hepsi varsayılandayken katman kapalıdır.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "These settings are applied with a transparent overlay on top of the screen; the overlay is off while all of them are at their defaults."
+    "Dongle ışığı" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dongle light"
           }
         }
       }
     },
-    "Bu sayfa Faz %lld'te eklenecek.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "This page will be added in phase %lld."
+    "Doygun renkler" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saturated colors"
           }
         }
       }
     },
-    "Canlılık": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vibrance"
+    "Doygunluk" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saturation"
           }
         }
       }
     },
-    "DPI ve polling ayarları sonraki sürümde.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DPI and polling settings are coming in a later version."
+    "DPI ve polling ayarları sonraki sürümde." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DPI and polling settings are coming in a later version."
           }
         }
       }
     },
-    "Dahili Ekran": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Built-in Display"
+    "Durdur" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop"
           }
         }
       }
     },
-    "Dalgalanma": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ripple"
+    "Durduruldu" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stopped"
           }
         }
       }
     },
-    "Dengeli": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Balanced"
+    "Düşük Pil" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Low Battery"
           }
         }
       }
     },
-    "Derin alt bas ve hava; orta bölge geri planda.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Deep sub-bass and air; mids sit back."
+    "Düz" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flat"
           }
         }
       }
     },
-    "Değiştirildi": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Modified"
+    "Efekt" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Effect"
           }
         }
       }
     },
-    "Dikey dalga": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vertical wave"
+    "Ekolayzır" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Equalizer"
           }
         }
       }
     },
-    "Dil": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Language"
+    "Ekran" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Display"
           }
         }
       }
     },
-    "Dil / Language": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Language / Dil"
+    "Ekran bulunamadı" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No display found"
           }
         }
       }
     },
-    "Dil değişince uygulama yeniden başlar.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "The app restarts when the language changes."
+    "Ekran profili 1–4" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Display profile 1–4"
           }
         }
       }
     },
-    "DisplayTuner": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DisplayTuner"
+    "Ekrandan renk seç" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pick a color from the screen"
           }
         }
       }
     },
-    "DisplayTuner bu script'in işlerini devraldı. Script silinmez, sadece durdurulur.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DisplayTuner has taken over this script's jobs. The script is not deleted, only stopped."
+    "Ekranlar okunuyor…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reading displays…"
           }
         }
       }
     },
-    "DisplayTuner'dan Çık": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Quit DisplayTuner"
+    "Elektronik" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Electronic"
           }
         }
       }
     },
-    "Dock takılınca": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "When the dock is connected"
+    "Elle açılabilir" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn on manually"
           }
         }
       }
     },
-    "Dolgu rengi": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Fill color"
+    "EQ açık" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "EQ on"
           }
         }
       }
     },
-    "Dongle ışığı": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dongle light"
+    "Erişilebilirlik izni gerekiyor." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accessibility permission is required."
           }
         }
       }
     },
-    "Doygun renkler": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Saturated colors"
+    "Eski dock script'i (dockapps.sh)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Old dock script (dockapps.sh)"
           }
         }
       }
     },
-    "Doygunluk": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Saturation"
+    "Eski kurulum" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Old setup"
           }
         }
       }
     },
-    "Doğal enstrüman tınısı, sıcak orta bölge.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Natural instrument timbre, warm mids."
+    "Film" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Movie"
           }
         }
       }
     },
-    "Durdur": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Stop"
+    "Film ve Konuşma" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Movies & Voice"
           }
         }
       }
     },
-    "Durduruldu": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Stopped"
+    "Firmware %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Firmware %@"
           }
         }
       }
     },
-    "Düz": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Flat"
+    "FPS: 2–4 kHz öne çıkar, patlama uğultusu azalır." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "FPS: lifts 2–4 kHz, tames explosion rumble."
           }
         }
       }
     },
-    "Düşük Pil": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Low Battery"
+    "Gama" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gamma"
           }
         }
       }
     },
-    "Efekt": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Effect"
+    "Gece" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Night"
           }
         }
       }
     },
-    "Ekolayzır": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Equalizer"
+    "Genel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "General"
           }
         }
       }
     },
-    "Ekran": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Display"
+    "Geniş haritalar: uzaktaki adım ve silah yönleri daha net." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Large maps: distant steps and gunfire direction are clearer."
           }
         }
       }
     },
-    "Ekran bulunamadı": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "No display found"
+    "Geri" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back"
           }
         }
       }
     },
-    "Ekran profili 1–4": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Display profile 1–4"
+    "Girdap" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swirl"
           }
         }
       }
     },
-    "Ekrandan renk seç": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pick a color from the screen"
+    "Gitar gövdesi ve davul vuruşu öne çıkar." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brings out guitar body and drum punch."
           }
         }
       }
     },
-    "Ekranlar okunuyor…": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reading displays…"
+    "GitHub" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GitHub"
           }
         }
       }
     },
-    "Elektronik": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Electronic"
+    "Gölge" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shadows"
           }
         }
       }
     },
-    "Erişilebilirlik izni gerekiyor.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Accessibility permission is required."
+    "Görünüm" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appearance"
           }
         }
       }
     },
-    "Eski dock script'i (dockapps.sh)": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Old dock script (dockapps.sh)"
+    "Göz konforu" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eye comfort"
           }
         }
       }
     },
-    "Eski kurulum": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Old setup"
+    "Göz konforu açık" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eye comfort on"
           }
         }
       }
     },
-    "FPS: 2–4 kHz öne çıkar, patlama uğultusu azalır.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "FPS: lifts 2–4 kHz, tames explosion rumble."
+    "Göz konforu kapalı" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eye comfort off"
           }
         }
       }
     },
-    "Film": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Movie"
+    "Gradyan" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gradient"
           }
         }
       }
     },
-    "Film ve Konuşma": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Movies & Voice"
+    "Gri skala (11 kademe)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grayscale (11 steps)"
           }
         }
       }
     },
-    "Firmware %@": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Firmware %@"
+    "Güç ve ışık" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Power and light"
           }
         }
       }
     },
-    "Gama": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gamma"
+    "Güçlü 808 bas, temiz vokal." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Strong 808 bass, clean vocals."
           }
         }
       }
     },
-    "Gece": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Night"
+    "Gün batımından gün doğumuna" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunset to sunrise"
           }
         }
       }
     },
-    "Genel": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "General"
+    "Gündüz, gece veya film için aktif profili kopyalayıp ayarlarını değiştirin." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Duplicate the active profile and adjust it for day, night or movies."
           }
         }
       }
     },
-    "Geniş haritalar: uzaktaki adım ve silah yönleri daha net.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Large maps: distant steps and gunfire direction are clearer."
+    "Hafif V: canlı vokal, tok bas, parlak üst." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gentle V: lively vocals, solid bass, bright top."
           }
         }
       }
     },
-    "Girdap": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Swirl"
+    "Hazır ayar" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preset"
           }
         }
       }
     },
-    "GitHub": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "GitHub"
+    "Hazır renkler" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Presets"
           }
         }
       }
     },
-    "Gitar gövdesi ve davul vuruşu öne çıkar.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Brings out guitar body and drum punch."
+    "HEX" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HEX"
           }
         }
       }
     },
-    "Gradyan": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gradient"
+    "Hikâye oyunları: dolgun bas, net diyalog, geniş tizler." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Story games: full bass, clear dialogue, open treble."
           }
         }
       }
     },
-    "Gri skala (11 kademe)": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Grayscale (11 steps)"
+    "Hip-Hop" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hip-Hop"
           }
         }
       }
     },
-    "Gölge": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Shadows"
+    "Hız" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speed"
           }
         }
       }
     },
-    "Görünüm": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Appearance"
+    "İleri" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forward"
           }
         }
       }
     },
-    "Gündüz, gece veya film için aktif profili kopyalayıp ayarlarını değiştirin.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Duplicate the active profile and adjust it for day, night or movies."
+    "İmleç" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cursor"
           }
         }
       }
     },
-    "Güç ve ışık": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Power and light"
+    "İmleç boyutu" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cursor size"
           }
         }
       }
     },
-    "Güçlü 808 bas, temiz vokal.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Strong 808 bass, clean vocals."
+    "İmleç görünümü" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cursor appearance"
           }
         }
       }
     },
-    "HEX": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "HEX"
+    "İşlem başarısız (%d)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Operation failed (%d)"
           }
         }
       }
     },
-    "Hafif V: canlı vokal, tok bas, parlak üst.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gentle V: lively vocals, solid bass, bright top."
+    "İvmeyi kapat (doğrusal hareket)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disable acceleration (linear movement)"
           }
         }
       }
     },
-    "Hazır ayar": {
-      "extractionState": "stale",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Preset"
+    "İzin gerekli" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permission required"
           }
         }
       }
     },
-    "Hazır renkler": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Presets"
+    "İzin Ver…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allow…"
           }
         }
       }
     },
-    "Hikâye oyunları: dolgun bas, net diyalog, geniş tizler.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Story games: full bass, clear dialogue, open treble."
+    "İzni verdikten sonra DisplayTuner'ı yeniden başlatın." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restart DisplayTuner after granting the permission."
           }
         }
       }
     },
-    "Hip-Hop": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hip-Hop"
+    "Kablosuz Kulaklık" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wireless Earbuds"
           }
         }
       }
     },
-    "Hız": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Speed"
+    "Kalın ok" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bold arrow"
           }
         }
       }
     },
-    "Kalın ok": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Bold arrow"
+    "Kapalı" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Off"
           }
         }
       }
     },
-    "Kapalı": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Off"
+    "Kasırga" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hurricane"
           }
         }
       }
     },
-    "Kasırga": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hurricane"
+    "Kaydet" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
           }
         }
       }
     },
-    "Kaydet": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Save"
+    "Kaydırma" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scrolling"
           }
         }
       }
     },
-    "Kaydırma": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Scrolling"
+    "Kazanç" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gain"
           }
         }
       }
     },
-    "Kazanç": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gain"
+    "Kazanç (kırmızı)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gain (red)"
           }
         }
       }
     },
-    "Kazanç (kırmızı)": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gain (red)"
+    "Kazanç (mavi)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gain (blue)"
           }
         }
       }
     },
-    "Kazanç (mavi)": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gain (blue)"
+    "Kazanç (yeşil)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gain (green)"
           }
         }
       }
     },
-    "Kazanç (yeşil)": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gain (green)"
+    "Kenar rengi" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Outline color"
           }
         }
       }
     },
-    "Kenar rengi": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Outline color"
+    "Kendi ayarın" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your own preset"
           }
         }
       }
     },
-    "Kendi ayarın": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Your own preset"
+    "Kendi sesini duy (sidetone)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hear yourself (sidetone)"
           }
         }
       }
     },
-    "Kendi sesini duy (sidetone)": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hear yourself (sidetone)"
+    "Kırmızı kazanç" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Red gain"
           }
         }
       }
     },
-    "Klavyeye erişmek için Giriş İzleme izni gerekiyor.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Input Monitoring permission is required to access the keyboard."
+    "Kısayollar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shortcuts"
           }
         }
       }
     },
-    "Kontrast": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Contrast"
+    "Kısık seste bas ve tizler kaybolmasın diye (loudness)." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keeps bass and treble audible at low volume (loudness)."
           }
         }
       }
     },
-    "Konuşma": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Voice"
+    "Klavyeye erişmek için Giriş İzleme izni gerekiyor." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Input Monitoring permission is required to access the keyboard."
           }
         }
       }
     },
-    "Koyu": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dark"
+    "Kontrast" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contrast"
           }
         }
       }
     },
-    "Kulaklık": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Headset"
+    "Konuşma" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voice"
           }
         }
       }
     },
-    "Kulaklık EQ hazır ayarı": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Headset EQ preset"
+    "Koyu" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dark"
           }
         }
       }
     },
-    "Kulaklık Pili Azalıyor": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Headset Battery Low"
+    "Kulaklığın kendi sesi, hiçbir değişiklik yok." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The headset's own sound, no changes."
           }
         }
       }
     },
-    "Kulaklığın kendi sesi, hiçbir değişiklik yok.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "The headset's own sound, no changes."
+    "Kulaklık" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Headset"
           }
         }
       }
     },
-    "Kırmızı kazanç": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Red gain"
+    "Kulaklık EQ hazır ayarı" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Headset EQ preset"
           }
         }
       }
     },
-    "Kısayollar": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Shortcuts"
+    "Kulaklık Pili Azalıyor" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Headset Battery Low"
           }
         }
       }
     },
-    "Kısık seste bas ve tizler kaybolmasın diye (loudness).": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Keeps bass and treble audible at low volume (loudness)."
+    "LinearMouse açık. Çift ters çevirmeyi önlemek için önce onu kapatın." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinearMouse is running. Quit it first to avoid double reversal."
           }
         }
       }
     },
-    "LinearMouse açık. Çift ters çevirmeyi önlemek için önce onu kapatın.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "LinearMouse is running. Quit it first to avoid double reversal."
+    "LinearMouse'u Kapat" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quit LinearMouse"
           }
         }
       }
     },
-    "LinearMouse'u Kapat": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Quit LinearMouse"
+    "Logo" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Logo"
           }
         }
       }
     },
-    "Logo": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Logo"
+    "MacBook ekranı" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MacBook display"
           }
         }
       }
     },
-    "MacBook ekranı": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "MacBook display"
+    "macOS mouse ayarları" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS mouse settings"
           }
         }
       }
     },
-    "Maksimum bas; vokaller korunur.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Maximum bass; vocals stay intact."
+    "Maksimum bas; vokaller korunur." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maximum bass; vocals stay intact."
           }
         }
       }
     },
-    "Masa (Kayıtlı)": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Desk (Saved)"
+    "Masa (Kayıtlı)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desk (Saved)"
           }
         }
       }
     },
-    "Masa Modu": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Desk Mode"
+    "Masa Modu" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desk Mode"
           }
         }
       }
     },
-    "Mavi kazanç": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Blue gain"
+    "Mavi ışığı azaltıp ekranı sıcak tona çeker. Renk profilinle birlikte çalışır; kısayol ⌃⌥N." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reduces blue light and warms the screen. Works together with your color profile; shortcut ⌃⌥N."
           }
         }
       }
     },
-    "Mikrofon": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Microphone"
+    "Mavi kazanç" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blue gain"
           }
         }
       }
     },
-    "Mikrofon Açık": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Microphone On"
+    "Mikrofon" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Microphone"
           }
         }
       }
     },
-    "Mikrofon Kapalı": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Microphone Off"
+    "Mikrofon Açık" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Microphone On"
           }
         }
       }
     },
-    "Monitör (donanım)": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Monitor (hardware)"
+    "Mikrofon Kapalı" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Microphone Off"
           }
         }
       }
     },
-    "Monitör bağlı değil": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Monitor not connected"
+    "Mission Control" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mission Control"
           }
         }
       }
     },
-    "Monitörü RGB Full'a al ve aktif profili uygula": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Switch the monitor to RGB Full and apply the active profile"
+    "Monitör (donanım)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monitor (hardware)"
           }
         }
       }
     },
-    "Mouse": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mouse"
+    "Monitör bağlı değil" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monitor not connected"
           }
         }
       }
     },
-    "Mouse Pili Azalıyor": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mouse Battery Low"
+    "Monitörü RGB Full'a al ve aktif profili uygula" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Switch the monitor to RGB Full and apply the active profile"
           }
         }
       }
     },
-    "Mouse tekerleğini ters çevir": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reverse mouse wheel"
+    "Mouse" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mouse"
           }
         }
       }
     },
-    "Müzik": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Music"
+    "Mouse Pili Azalıyor" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mouse Battery Low"
           }
         }
       }
     },
-    "Nabız": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pulse"
+    "Mouse tekerleğini ters çevir" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reverse mouse wheel"
           }
         }
       }
     },
-    "Nefes": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Breathing"
+    "Müzik" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Music"
           }
         }
       }
     },
-    "Nokta": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dot"
+    "Nabız" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pulse"
           }
         }
       }
     },
-    "Ok": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Arrow"
+    "Nefes" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Breathing"
           }
         }
       }
     },
-    "Ok imlecinin şeklini ve rengini değiştirir. \"Sistem\" macOS'un kendi imlecidir.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Changes the shape and color of the arrow cursor. \"System\" is the macOS cursor."
+    "Nokta" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dot"
           }
         }
       }
     },
-    "Okunuyor…": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reading…"
+    "Ok" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arrow"
           }
         }
       }
     },
-    "Otomasyon": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Automation"
+    "Ok imlecinin şeklini ve rengini değiştirir. \"Sistem\" macOS'un kendi imlecidir." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Changes the shape and color of the arrow cursor. \"System\" is the macOS cursor."
           }
         }
       }
     },
-    "Otomatik kapanma": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Auto power-off"
+    "Okunuyor…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reading…"
           }
         }
       }
     },
-    "Oyun": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Game"
+    "Ön yan tuş" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Front side button"
           }
         }
       }
     },
-    "PR27R165QC bağlı değil": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "PR27R165QC is not connected"
+    "Önceki masaüstü" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Previous desktop"
           }
         }
       }
     },
-    "PUSAT K3 Pro": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "PUSAT K3 Pro"
+    "Örnek Bildirimleri Göster" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show Sample Notifications"
           }
         }
       }
     },
-    "Parlak alanlar": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Highlights"
+    "Örnek Göster" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show Samples"
           }
         }
       }
     },
-    "Parlaklık": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Brightness"
+    "Otomasyon" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automation"
           }
         }
       }
     },
-    "Patlamalar dolgun, konuşmalar net.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Full explosions, clear dialogue."
+    "Otomatik kapanma" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auto power-off"
           }
         }
       }
     },
-    "Pil": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Battery"
+    "Oyun" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Game"
           }
         }
       }
     },
-    "Pil %25'lik adımlarla raporlanır": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Battery is reported in 25% steps"
+    "Özel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom"
           }
         }
       }
     },
-    "Pil bilgilerini yenile": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Refresh battery info"
+    "Parlak alanlar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Highlights"
           }
         }
       }
     },
-    "Pil durumu": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Battery status"
+    "Parlaklık" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brightness"
           }
         }
       }
     },
-    "Pil seçtiğin seviyelere düşünce uyarır; her seviye bir kez. %5 ve altı (kırmızı) ekranın ortasında kritik uyarıdır.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Alerts when the battery drops to the levels you choose, once per level. 5% and below (red) is a critical alert in the middle of the screen."
+    "Patlamalar dolgun, konuşmalar net." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Full explosions, clear dialogue."
           }
         }
       }
     },
-    "Podcast ve toplantı: vokal netliği, bas uğultusu yok.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Podcasts and calls: clear voices, no bass boom."
+    "Pil" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Battery"
           }
         }
       }
     },
-    "Pop": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pop"
+    "Pil %25'lik adımlarla raporlanır" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Battery is reported in 25% steps"
           }
         }
       }
     },
-    "Profil": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Profile"
+    "Pil bilgilerini yenile" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refresh battery info"
           }
         }
       }
     },
-    "Profil %lld": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Profile %lld"
+    "Pil durumu" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Battery status"
           }
         }
       }
     },
-    "Profil %lld aydınlatma": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Profile %lld lighting"
+    "Pil seçtiğin seviyelere düşünce uyarır; her seviye bir kez. %5 ve altı (kırmızı) ekranın ortasında kritik uyarıdır." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alerts when the battery drops to the levels you choose, once per level. 5% and below (red) is a critical alert in the middle of the screen."
           }
         }
       }
     },
-    "Profiller": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Profiles"
+    "Podcast ve toplantı: vokal netliği, bas uğultusu yok." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Podcasts and calls: clear voices, no bass boom."
           }
         }
       }
     },
-    "ROG Gladius II": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ROG Gladius II"
+    "Pop" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pop"
           }
         }
       }
     },
-    "ROG Gladius II Wireless": {
-      "extractionState": "stale",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ROG Gladius II Wireless"
+    "PR27R165QC" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PR27R165QC"
           }
         }
       }
     },
-    "Referans ton: zayıf basları tamamlar, sert üst ortaları yumuşatır.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reference tuning: fills in the weak bass and softens harsh upper mids."
+    "PR27R165QC bağlı değil" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PR27R165QC is not connected"
           }
         }
       }
     },
-    "Renk": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Color"
+    "Profil" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profile"
           }
         }
       }
     },
-    "Renk (filtre)": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Color (filter)"
+    "Profil %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profile %lld"
           }
         }
       }
     },
-    "Renk (yazılım)": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Color (software)"
+    "Profil %lld aydınlatma" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profile %lld lighting"
           }
         }
       }
     },
-    "Renk adımları Ekran sekmesindeki \"Renk yönetimi\" açıkken çalışır.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Color steps run while \"Color management\" is on in the Display tab."
+    "Profiller" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profiles"
           }
         }
       }
     },
-    "Renk döngüsü": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Color cycle"
+    "PUSAT K3 Pro" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PUSAT K3 Pro"
           }
         }
       }
     },
-    "Renk modu": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Color mode"
+    "Referans ton: zayıf basları tamamlar, sert üst ortaları yumuşatır." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reference tuning: fills in the weak bass and softens harsh upper mids."
           }
         }
       }
     },
-    "Renk sıcaklığı": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Color temperature"
+    "Renk" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Color"
           }
         }
       }
     },
-    "Renk sıcaklığı: sağa sıcak, sola soğuk.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Color temperature: right is warmer, left is cooler."
+    "Renk (filtre)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Color (filter)"
           }
         }
       }
     },
-    "Renk ve tuş başına renk sonraki sürümde.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Color and per-key color are coming in a later version."
+    "Renk (yazılım)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Color (software)"
           }
         }
       }
     },
-    "Renk yönetimi": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Color management"
+    "Renk adımları Ekran sekmesindeki \"Renk yönetimi\" açıkken çalışır." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Color steps run while \"Color management\" is on in the Display tab."
           }
         }
       }
     },
-    "Renkli nefes": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Color breathing"
+    "Renk döngüsü" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Color cycle"
           }
         }
       }
     },
-    "Renkli tepki": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Color reactive"
+    "Renk modu" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Color mode"
           }
         }
       }
     },
-    "Rock": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rock"
+    "Renk sıcaklığı" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Color temperature"
           }
         }
       }
     },
-    "Sabit": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Static"
+    "Renk sıcaklığı: sağa sıcak, sola soğuk." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Color temperature: right is warmer, left is cooler."
           }
         }
       }
     },
-    "Sadece düşük pil": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Low battery only"
+    "Renk ve tuş başına renk sonraki sürümde." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Color and per-key color are coming in a later version."
           }
         }
       }
     },
-    "Sağdan sola": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Right to left"
+    "Renk yönetimi" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Color management"
           }
         }
       }
     },
-    "Sepya": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sepia"
+    "Renkli nefes" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Color breathing"
           }
         }
       }
     },
-    "Seviye": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Level"
+    "Renkli tepki" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Color reactive"
           }
         }
       }
     },
-    "Seçili hazır ayarın orijinal eğrisine döner; hazır ayar yoksa düz yapar.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Returns to the selected preset's original curve, or flat if none is selected."
+    "Rock" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rock"
           }
         }
       }
     },
-    "Sil": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Delete"
+    "ROG Gladius II" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ROG Gladius II"
           }
         }
       }
     },
-    "Sinematik Oyun": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cinematic Games"
+    "ROG Gladius II Wireless" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ROG Gladius II Wireless"
           }
         }
       }
     },
-    "Sinüs": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sine"
+    "Sabit" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Static"
           }
         }
       }
     },
-    "Sistem": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "System"
+    "Sadece düşük pil" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Low battery only"
           }
         }
       }
     },
-    "Sistem Ayarları → Gizlilik ve Güvenlik → Erişilebilirlik'te DisplayTuner'ı açın.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Turn on DisplayTuner in System Settings → Privacy & Security → Accessibility."
+    "Sağdan sola" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Right to left"
           }
         }
       }
     },
-    "Sistem Ayarları'nı Aç": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Open System Settings"
+    "Şarj limiti %80 — bu Mac'te desteklenmiyor" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "80% charge limit — not supported on this Mac"
           }
         }
       }
     },
-    "Siyah seviyesi (0–10)": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Black level (0–10)"
+    "Şarj Tamamlandı" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fully Charged"
           }
         }
       }
     },
-    "Soldan sağa": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Left to right"
+    "Seçili hazır ayarın orijinal eğrisine döner; hazır ayar yoksa düz yapar." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Returns to the selected preset's original curve, or flat if none is selected."
           }
         }
       }
     },
-    "Son bilinen": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Last known"
+    "Şekil" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shape"
           }
         }
       }
     },
-    "Son kullanılanlar": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Recent"
+    "Sekmeyi kapat" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close tab"
           }
         }
       }
     },
-    "Sürüm %@": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Version %@"
+    "Şelale" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waterfall"
           }
         }
       }
     },
-    "Sıfırla": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reset"
+    "Sen kapatana kadar açık" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On until you turn it off"
           }
         }
       }
     },
-    "Tamam": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "OK"
+    "Sepya" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sepia"
           }
         }
       }
     },
-    "Tekerlek": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Wheel"
+    "Seviye" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Level"
           }
         }
       }
     },
-    "Ten tonları": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Skin tones"
+    "Sil" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
           }
         }
       }
     },
-    "Tepki": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reactive"
+    "Sinematik Oyun" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cinematic Games"
           }
         }
       }
     },
-    "Tepki (dalgalanma)": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reactive (ripple)"
+    "Sinüs" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sine"
           }
         }
       }
     },
-    "Tepki (tek tuş)": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reactive (single key)"
+    "Sistem" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "System"
           }
         }
       }
     },
-    "Tepki (yatay)": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reactive (horizontal)"
+    "Sistem Ayarları → Gizlilik ve Güvenlik → Erişilebilirlik'te DisplayTuner'ı açın." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn on DisplayTuner in System Settings → Privacy & Security → Accessibility."
           }
         }
       }
     },
-    "Test Desenleri…": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Test Patterns…"
+    "Sistem Ayarları'nı Aç" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open System Settings"
           }
         }
       }
     },
-    "Ton": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hue"
+    "Siyah seviyesi (0–10)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Black level (0–10)"
           }
         }
       }
     },
-    "Trackpad doğal kaydırmada kalır; sadece mouse tekerleği ters döner.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "The trackpad keeps natural scrolling; only the mouse wheel is reversed."
+    "Sıcaklık" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Warmth"
           }
         }
       }
     },
-    "Uzak Sesler": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Distant Sounds"
+    "Sıfırla" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset"
           }
         }
       }
     },
-    "Varsayılana Dön": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reset to Default"
+    "Soldan sağa" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Left to right"
           }
         }
       }
     },
-    "Varsayılana döndür": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reset to default"
+    "Son bilinen" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last known"
           }
         }
       }
     },
-    "Vazgeç": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancel"
+    "Son kullanılanlar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recent"
           }
         }
       }
     },
-    "Vorteks": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vortex"
+    "Sonraki masaüstü" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next desktop"
           }
         }
       }
     },
-    "Yatay dalga": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Horizontal wave"
+    "Sürüm %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version %@"
           }
         }
       }
     },
-    "Yağmur": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rain"
+    "Tamam" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
           }
         }
       }
     },
-    "Yeni EQ ayarı": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "New EQ preset"
+    "Tekerlek" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wheel"
           }
         }
       }
     },
-    "Yeni ayar olarak kaydet…": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Save as new preset…"
+    "Ten tonları" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skin tones"
           }
         }
       }
     },
-    "Yeniden Adlandır": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rename"
+    "Tepki" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reactive"
           }
         }
       }
     },
-    "Yeniden Başlat": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Restart"
+    "Tepki (dalgalanma)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reactive (ripple)"
           }
         }
       }
     },
-    "Yenileme hızı": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Refresh rate"
+    "Tepki (tek tuş)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reactive (single key)"
           }
         }
       }
     },
-    "Yeşil kazanç": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Green gain"
+    "Tepki (yatay)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reactive (horizontal)"
           }
         }
       }
     },
-    "Yön": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Direction"
+    "Test Desenleri…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Test Patterns…"
           }
         }
       }
     },
-    "macOS mouse ayarları": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "macOS mouse settings"
+    "Ton" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hue"
           }
         }
       }
     },
-    "Çalışıyor": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Running"
+    "Trackpad doğal kaydırmada kalır; sadece mouse tekerleği ters döner." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The trackpad keeps natural scrolling; only the mouse wheel is reversed."
           }
         }
       }
     },
-    "Çapraz dalga": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Diagonal wave"
+    "Uygulama pencereleri" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App windows"
           }
         }
       }
     },
-    "Çözünürlük": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Resolution"
+    "Uzak Sesler" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Distant Sounds"
           }
         }
       }
     },
-    "Örnek Bildirimleri Göster": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Show Sample Notifications"
+    "Varsayılan (değiştirme)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Default (no change)"
           }
         }
       }
     },
-    "Örnek Göster": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Show Samples"
+    "Varsayılan ses çıkışı bir Bluetooth kulaklık olduğunda kendiliğinden devreye girer. İlk kullanımda macOS bir kez sistem sesi izni ister; ses kaydedilmez, sadece anlık işlenir." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turns on automatically when the default sound output is a Bluetooth headphone. On first use macOS asks once for system audio access; audio is processed live, never recorded."
           }
         }
       }
     },
-    "Özel": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Custom"
+    "Varsayılana Dön" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset to Default"
           }
         }
       }
     },
-    "İmleç": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cursor"
+    "Varsayılana döndür" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset to default"
           }
         }
       }
     },
-    "İmleç boyutu": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cursor size"
+    "Vazgeç" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
           }
         }
       }
     },
-    "İmleç görünümü": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cursor appearance"
+    "Vorteks" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vortex"
           }
         }
       }
     },
-    "İvmeyi kapat (doğrusal hareket)": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Disable acceleration (linear movement)"
+    "Windows'taki gibi: arka tuş Geri, ön tuş İleri (Safari, Chrome, Finder, Xcode…). Ters kaydırmayla aynı izni kullanır." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Like on Windows: back button goes Back, front button goes Forward (Safari, Chrome, Finder, Xcode…). Uses the same permission as scroll reversal."
           }
         }
       }
     },
-    "İzin Ver…": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Allow…"
+    "Yağmur" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rain"
           }
         }
       }
     },
-    "İzin gerekli": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Permission required"
+    "Yan tuşlar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Side buttons"
           }
         }
       }
     },
-    "İzni verdikten sonra DisplayTuner'ı yeniden başlatın.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Restart DisplayTuner after granting the permission."
+    "Yan tuşlar kapalı; mouse tuşları macOS'un varsayılanıyla çalışır." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Side buttons are off; the mouse buttons use the macOS default."
           }
         }
       }
     },
-    "İşlem başarısız (%d)": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Operation failed (%d)"
+    "Yan tuşları kullan" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use side buttons"
           }
         }
       }
     },
-    "Şarj Tamamlandı": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Fully Charged"
+    "Yatay dalga" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Horizontal wave"
           }
         }
       }
     },
-    "Şarj limiti %80 — bu Mac'te desteklenmiyor": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "80% charge limit — not supported on this Mac"
+    "Yeni ayar olarak kaydet…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save as new preset…"
           }
         }
       }
     },
-    "Şekil": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Shape"
+    "Yeni EQ ayarı" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New EQ preset"
           }
         }
       }
     },
-    "Şelale": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Waterfall"
+    "Yeni sekme" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New tab"
           }
         }
       }
     },
-    "—": {
-      "extractionState": "stale",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "—"
+    "Yeniden Adlandır" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rename"
           }
         }
       }
     },
-    "“%@” ayarını güncelle": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Update “%@”"
+    "Yeniden Başlat" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restart"
           }
         }
       }
     },
-    "“%@” ayarını sil": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Delete “%@”"
+    "Yenileme hızı" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refresh rate"
           }
         }
       }
     },
-    "⌃⌥%lld": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "⌃⌥%lld"
+    "Yeşil kazanç" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Green gain"
           }
         }
       }
     },
-    "⌃⌥1 … ⌃⌥4": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "⌃⌥1 … ⌃⌥4"
+    "Yön" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Direction"
           }
         }
       }
     },
-    "⌃⌥E": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "⌃⌥E"
+    "Zamanlama" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom schedule"
           }
         }
       }
     }
   },
-  "version": "1.0"
+  "version" : "1.0"
 }

@@ -12,6 +12,7 @@ struct QuickPopoverView: View {
     let brightness: BrightnessModel
     let batteries: BatteryMonitor
     let profiles: ProfileStore
+    let eyeComfort: EyeComfort
     var onOpenDevice: (SidebarItem) -> Void = { _ in }
     let onOpenSettings: () -> Void
     @State private var rates: [Int] = []
@@ -30,6 +31,26 @@ struct QuickPopoverView: View {
                     }
                 }
             }
+            // D-157: Kontrol Merkezi tarzı göz konforu düğmesi.
+            Button { eyeComfort.toggle() } label: {
+                HStack(spacing: 10) {
+                    Image(systemName: eyeComfort.isActive ? "moon.stars.fill" : "moon.stars")
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundStyle(eyeComfort.isActive ? .white : .primary)
+                        .frame(width: 30, height: 30)
+                        .background(Circle().fill(eyeComfort.isActive ? Color.orange : Color.primary.opacity(0.12)))
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text("Göz konforu").font(.callout.weight(.semibold))
+                        Text(eyeComfort.isActive ? "Açık" : "Kapalı").font(.caption).foregroundStyle(.secondary)
+                    }
+                    Spacer()
+                }
+                .padding(Theme.Spacing.s + 2)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .glassBackground(cornerRadius: Theme.Radius.card)
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
             if profiles.profiles.count > 1 {
                 GlassCard { ProfilePicker(profiles: profiles) }
             }

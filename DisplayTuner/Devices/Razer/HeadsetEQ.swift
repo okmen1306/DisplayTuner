@@ -88,11 +88,15 @@ final class HeadsetEQStore {
     private let defaults = UserDefaults.standard
     private let logger = Logger(subsystem: "com.muhammed.DisplayTuner", category: "EQ")
 
-    init() {
-        if let data = defaults.data(forKey: "eq.userPresets"), let list = try? JSONDecoder().decode([EQPreset].self, from: data) {
+    /// UserDefaults anahtar öneki ("eq" kulaklık, "btEQ" Bluetooth kulaklık).
+    private let prefix: String
+
+    init(prefix: String = "eq") {
+        self.prefix = prefix
+        if let data = defaults.data(forKey: "\(prefix).userPresets"), let list = try? JSONDecoder().decode([EQPreset].self, from: data) {
             userPresets = list
         }
-        selectedID = defaults.string(forKey: "eq.selected")
+        selectedID = defaults.string(forKey: "\(prefix).selected")
     }
 
     var all: [EQPreset] { EQPreset.builtIn + userPresets }
@@ -106,7 +110,7 @@ final class HeadsetEQStore {
 
     func select(_ id: String?) {
         selectedID = id
-        defaults.set(id, forKey: "eq.selected")
+        defaults.set(id, forKey: "\(prefix).selected")
     }
 
     /// Kulaklığa yazar: önce "Özel" moda alır, sonra eğriyi yazar (D-152).
@@ -143,7 +147,7 @@ final class HeadsetEQStore {
     }
 
     private func persist() {
-        if let data = try? JSONEncoder().encode(userPresets) { defaults.set(data, forKey: "eq.userPresets") }
+        if let data = try? JSONEncoder().encode(userPresets) { defaults.set(data, forKey: "\(prefix).userPresets") }
     }
 
     /// ⌃⌥E kısayolunun döndüğü sıra.

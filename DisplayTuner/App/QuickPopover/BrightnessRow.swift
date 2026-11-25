@@ -6,6 +6,7 @@
 //  Faz: 1  ·  Kararlar: 7.1  (bkz. AGENT_BRIEF.md)
 //
 
+import AppKit
 import SwiftUI
 
 /// Popover'daki parlaklık modeli. Harici ekran DDC, dahili ekran DisplayServices.
@@ -24,6 +25,21 @@ final class BrightnessModel {
     private(set) var isLoading = false
     private var pendingWrite: Task<Void, Never>?
 
+    private var screenObserver: NSObjectProtocol?
+
+    init() {
+        // D-155: ekran takılıp çıkınca satırlar kendiliğinden yenilenir; DDC servisi tazelenir.
+        screenObserver = NotificationCenter.default.addObserver(
+            forName: NSApplication.didChangeScreenParametersNotification, object: nil, queue: .main) { [weak self] _ in
+            Task { @MainActor in
+                await DDCService.shared.refresh()
+                await self?.load()
+            }
+        }
+    }
+
+    /// D-155: Monitör satırı DDC okumasına değil, monitörün gerçekten bağlı olmasına göre gösterilir.
+    /// DDC o an cevap vermezse servis tazelenip bir kez daha denenir; yine olmazsa son bilinen değer gösterilir.
     func load() async {
         isLoading = true
         defer { isLoading = false }
@@ -31,8 +47,20 @@ final class BrightnessModel {
         if let value = BuiltinBrightness.value {
             result.append(Row(id: .builtin, name: String(localized: "Dahili Ekran"), value: value, maximum: 1))
         }
-        if let ddc = await DDCService.shared.read(.brightness) {
-            result.append(Row(id: .external, name: "PR27R165QC", value: ddc.fraction, maximum: ddc.maximum))
+        if ProfileStore.monitorDisplayID != nil {
+            var ddc = await DDCService.shared.read(.brightness)
+            if ddc == nil {
+                await DDCService.shared.refresh()
+                ddc = await DDCService.shared.read(.brightness)
+            }
+            let defaults = UserDefaults.standard
+            if let ddc {
+                defaults.set(ddc.fraction, forKey: "monitorBrightness.last")
+                defaults.set(ddc.maximum, forKey: "monitorBrightness.max")
+            }
+            let value = ddc?.fraction ?? (defaults.object(forKey: "monitorBrightness.last") as? Double ?? 0.5)
+            let maximum = ddc?.maximum ?? (defaults.object(forKey: "monitorBrightness.max") as? Int ?? 100)
+            result.append(Row(id: .external, name: "PR27R165QC", value: value, maximum: maximum))
         }
         rows = result
     }

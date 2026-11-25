@@ -64,6 +64,13 @@ enum LUTMath {
         return (x * (levels - 1)).rounded() / (levels - 1)
     }
 
+    /// Değiştirilmemiş (doğrusal) tablo.
+    static func identity(size: Int) -> Table {
+        let n = max(size, 2)
+        let ramp = (0..<n).map { Float($0) / Float(n - 1) }
+        return Table(red: ramp, green: ramp, blue: ramp)
+    }
+
     static func maxDeviation(_ a: Table, _ b: Table) -> Float {
         guard a.count == b.count else { return .infinity }
         return zip(zip(a.red, a.green), zip(zip(b.red, b.green), zip(a.blue, b.blue)))

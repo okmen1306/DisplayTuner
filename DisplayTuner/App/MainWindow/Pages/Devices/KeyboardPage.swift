@@ -7,6 +7,7 @@
 //
 
 import AppKit
+import IOKit.hid
 import SwiftUI
 
 struct KeyboardPage: View {
@@ -28,6 +29,13 @@ struct KeyboardPage: View {
             if keyboard == nil {
                 Section {
                     Label("Klavyeye erişmek için Giriş İzleme izni gerekiyor.", systemImage: "lock.fill")
+                    Button("İzin Ver…") {
+                        // Sadece kullanıcı isteyince sorulur (D-159).
+                        if !IOHIDRequestAccess(kIOHIDRequestTypeListenEvent) {
+                            NSWorkspace.shared.open(URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_ListenEvent")!)
+                        }
+                        services.devices.rescan()
+                    }
                     Button("Sistem Ayarları'nı Aç") {
                         NSWorkspace.shared.open(URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_ListenEvent")!)
                     }

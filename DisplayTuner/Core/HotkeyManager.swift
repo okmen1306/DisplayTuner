@@ -49,6 +49,12 @@ final class HotkeyManager {
                 if let name = services.profiles.active?.displayName { services.notifier.hud(symbol: "sun.max.fill", text: name) }
             }
         }
+        register(keyCode: kVK_ANSI_N) {
+            services.eyeComfort.toggle()
+            let on = services.eyeComfort.mode != .off
+            services.notifier.hud(symbol: on ? "moon.stars.fill" : "sun.max.fill",
+                                  text: on ? String(localized: "Göz konforu açık") : String(localized: "Göz konforu kapalı"))
+        }
         register(keyCode: kVK_ANSI_E) {
             Task {
                 guard let headset = services.devices.headset else { return }

@@ -19,11 +19,15 @@ final class AppServices {
     let cursor = CursorService()
     let cursorAppearance = CursorAppearance()
     let eq = HeadsetEQStore()
+    let mouseButtons = MouseButtonMapper()
+    let eyeComfort: EyeComfort
+    let systemEQ = SystemEQ()
 
     init(devices: DeviceRegistry, batteries: BatteryMonitor, notifier: Notifier, profiles: ProfileStore) {
         self.devices = devices
         self.batteries = batteries
         self.notifier = notifier
         self.profiles = profiles
+        self.eyeComfort = EyeComfort(store: profiles)
     }
 }

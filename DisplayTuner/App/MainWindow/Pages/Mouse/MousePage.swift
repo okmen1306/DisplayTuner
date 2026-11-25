@@ -14,9 +14,9 @@ struct MousePage: View {
     let pointer: PointerSettings
     let cursor: CursorService
     let appearance: CursorAppearance
+    let buttons: MouseButtonMapper
     @State private var trusted = ScrollReverser.hasAccessibility
     @State private var linearMouseRunning = false
-    @MainActor private static var didPrompt = false
 
     var body: some View {
         Form {
@@ -45,6 +45,15 @@ struct MousePage: View {
                     Text("Sistem Ayarları → Gizlilik ve Güvenlik → Erişilebilirlik'te DisplayTuner'ı açın.")
                 }
             }
+            Section {
+                Toggle("Yan tuşları kullan", isOn: Binding(get: { buttons.isEnabled }, set: { buttons.isEnabled = $0 }))
+                MouseSideButtonsView(buttons: buttons)
+            } header: {
+                Text("Yan tuşlar")
+            } footer: {
+                Text("Windows'taki gibi: arka tuş Geri, ön tuş İleri (Safari, Chrome, Finder, Xcode…). Ters kaydırmayla aynı izni kullanır.")
+            }
+
             Section("İmleç") {
                 SettingRow(title: "Hız", symbol: "hare.fill") {
                     Slider(value: Binding(get: { pointer.speed }, set: { pointer.speed = $0 }), in: 0...PointerSettings.maxSpeed)
@@ -81,12 +90,7 @@ struct MousePage: View {
         }
         .formStyle(.grouped)
         .onAppear {
-            refresh()
-            // İzin yoksa macOS isteğini otomatik göster; uygulama Erişilebilirlik listesine kendiliğinden eklenir.
-            if !trusted && !Self.didPrompt {
-                Self.didPrompt = true          // her açılışta en fazla bir kez sor
-                ScrollReverser.requestAccessibility()
-            }
+            refresh()   // D-159: izin kendiliğinden istenmez; gerekirse "İzin Ver" düğmesi görünür.
         }
         .onReceive(Timer.publish(every: 2, on: .main, in: .common).autoconnect()) { _ in refresh() }
     }

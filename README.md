@@ -42,16 +42,21 @@ DisplayTuner replaces a pile of separate apps (BetterDisplay, LinearMouse, Razer
 - Hardware controls over DDC/CI: brightness, contrast, red/green/blue gain
 - Software color: gamma table (contrast, gamma, highlights, shadows, color temperature, per-channel gain) and an overlay filter (saturation, vibrance, hue, sepia)
 - Color profiles with hotkeys (⌃⌥1 … ⌃⌥4), plus test patterns
+- **Eye comfort** (night mode) for each display: manual, sunset to sunrise, or a custom schedule (⌃⌥N)
 
 ### Headset (Razer BlackShark V2 HyperSpeed)
 - Battery level with low-battery alerts
 - **10-band EQ** with a draggable curve and 14 tuned presets (Balanced, Footsteps, Distant Sounds, Cinematic, Pop, Electronic, Hip-Hop, Rock, Acoustic, Bass Boost, Movie, Voice, Night…), each editable with **Reset**, plus your own saved presets. Presets are tuned for this headset's measured sound (bright, light on bass). The EQ is saved to the headset's memory.
 - Sidetone, auto power-off and dongle light
 
+### Wireless earbuds (any Bluetooth headphones)
+- System-wide 10-band EQ with the same presets, turned on automatically when Bluetooth headphones are the sound output
+
 ### Mouse (ASUS ROG Gladius II Wireless)
 - Battery level, logo and wheel lighting (effect, color, brightness)
 - Reverse scroll for the mouse only (the trackpad keeps natural scrolling), pointer speed beyond the macOS limit, linear movement (acceleration off)
 - Cursor size, shape and color
+- **Side buttons**: Back / Forward like on Windows (or Mission Control, desktops, tabs), with a live preview of which button you pressed
 
 ### Keyboard (PUSAT K3 Pro)
 - Profiles, lighting effect, brightness, speed and direction

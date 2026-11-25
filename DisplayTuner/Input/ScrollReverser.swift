@@ -63,8 +63,9 @@ final class ScrollReverser {
 
     func start() {
         guard tap == nil else { return }
+        // D-159: izin burada istenmez (her açılışta pencere çıkıyordu); izin yoksa sessizce bekler,
+        // bekçi izin gelir gelmez başlatır. İzin isteği sadece Mouse sayfasındaki "İzin Ver" düğmesiyle.
         guard Self.hasAccessibility else {
-            Self.requestAccessibility()
             logger.info("Erişilebilirlik izni yok")
             return
         }

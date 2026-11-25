@@ -28,7 +28,7 @@ final class StatusItemController: NSObject {
         Task { [brightness] in await brightness.load() }
         popover.animates = true
         popover.contentViewController = NSHostingController(
-            rootView: QuickPopoverView(brightness: brightness, batteries: services.batteries, profiles: services.profiles,
+            rootView: QuickPopoverView(brightness: brightness, batteries: services.batteries, profiles: services.profiles, eyeComfort: services.eyeComfort,
                                        onOpenDevice: { [weak self] item in
                                            self?.popover.performClose(nil)
                                            self?.mainWindow.show(item)
@@ -69,6 +69,8 @@ final class StatusItemController: NSObject {
         if popover.isShown {
             popover.performClose(nil)
         } else {
+            // D-155: her açılışta ekran listesi tazelenir (bağlı olmayan monitör görünmez, bağlıysa hep görünür).
+            Task { [brightness] in await brightness.load() }
             popover.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
             popover.contentViewController?.view.window?.makeKey()
         }

@@ -46,6 +46,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
         automation.startMicMonitor()
         services.scrollReverser.startIfEnabled()
+        services.mouseButtons.startIfEnabled()
+        services.eyeComfort.start()
+        services.systemEQ.start()
         if UserDefaults.standard.object(forKey: "pointerSpeed") != nil { services.pointer.apply() }
         services.cursor.applySaved()
         if services.cursorAppearance.shape != .system { services.cursorAppearance.apply() }
@@ -66,7 +69,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let name = UserDefaults.standard.string(forKey: "DTOpenPage") ?? ""
         let pages: [String: SidebarItem] = [
             "display": .display, "mouse": .mouse, "devices": .devices, "headset": .headset,
-            "mouseDevice": .mouseDevice, "keyboard": .keyboard, "automation": .automation, "notifications": .notifications, "settings": .settings,
+            "mouseDevice": .mouseDevice, "keyboard": .keyboard, "automation": .automation, "notifications": .notifications, "settings": .settings, "earbuds": .earbuds,
         ]
         if let item = pages[name] { mainWindow.show(item) }
         if let path = UserDefaults.standard.string(forKey: "DTSnapshot") {

@@ -16,6 +16,7 @@ enum SidebarItem: Hashable, Identifiable {
     case headset
     case mouseDevice
     case keyboard
+    case earbuds
     case automation
     case notifications
     case settings
@@ -23,7 +24,7 @@ enum SidebarItem: Hashable, Identifiable {
     var id: Self { self }
 
     static let primary: [SidebarItem] = [.display, .mouse, .devices]
-    static let deviceChildren: [SidebarItem] = [.headset, .mouseDevice, .keyboard]
+    static let deviceChildren: [SidebarItem] = [.headset, .earbuds, .mouseDevice, .keyboard]
     static let secondary: [SidebarItem] = [.automation, .notifications, .settings]
 
     var title: LocalizedStringKey {
@@ -34,6 +35,7 @@ enum SidebarItem: Hashable, Identifiable {
         case .headset: "BlackShark V2"
         case .mouseDevice: "ROG Gladius II"
         case .keyboard: "PUSAT K3 Pro"
+        case .earbuds: "Kablosuz Kulaklık"
         case .automation: "Otomasyon"
         case .notifications: "Bildirimler"
         case .settings: "Ayarlar"
@@ -48,6 +50,7 @@ enum SidebarItem: Hashable, Identifiable {
         case .headset: "headphones"
         case .mouseDevice: "computermouse.fill"
         case .keyboard: "keyboard.fill"
+        case .earbuds: "airpodspro"
         case .automation: "gearshape.2.fill"
         case .notifications: "bell.badge.fill"
         case .settings: "gearshape.fill"
@@ -60,6 +63,7 @@ enum SidebarItem: Hashable, Identifiable {
         case .mouse: .gray
         case .devices: .green
         case .headset, .mouseDevice, .keyboard: .teal
+        case .earbuds: .pink
         case .automation: .purple
         case .notifications: .red
         case .settings: .gray
@@ -71,7 +75,7 @@ enum SidebarItem: Hashable, Identifiable {
         switch self {
         case .display: 5
         case .mouse: 4
-        case .devices, .headset, .mouseDevice, .keyboard, .notifications: 2
+        case .devices, .headset, .mouseDevice, .keyboard, .notifications, .earbuds: 2
         case .automation, .settings: 6
         }
     }
