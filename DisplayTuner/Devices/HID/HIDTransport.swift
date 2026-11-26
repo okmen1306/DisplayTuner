@@ -20,9 +20,13 @@ final class HIDTransport: @unchecked Sendable {
     private let bufferSize = 256
     private let logger = Logger(subsystem: "com.muhammed.DisplayTuner", category: "HID")
     private var isActive = false
+    private let label: String
+    /// D-162: her gelen rapor (cevap beklenmeyenler dahil). Mouse'un DPI tuşu gibi kendiliğinden gelen olaylar için.
+    var onReport: (@Sendable ([UInt8]) -> Void)?
 
     init?(device: IOHIDDevice, label: String) {
         self.device = device
+        self.label = label
         self.queue = DispatchQueue(label: "com.muhammed.DisplayTuner.hid.\(label)")
         self.buffer = .allocate(capacity: bufferSize)
 
@@ -53,6 +57,7 @@ final class HIDTransport: @unchecked Sendable {
     }
 
     private func append(_ report: [UInt8]) {
+        onReport?(report)
         lock.withLock {
             reports.append(report)
             if reports.count > 32 { reports.removeFirst(reports.count - 32) }

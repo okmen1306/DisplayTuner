@@ -56,7 +56,7 @@ DisplayTuner replaces a pile of separate apps (BetterDisplay, LinearMouse, Razer
 - Battery level, logo and wheel lighting (effect, color, brightness)
 - Reverse scroll for the mouse only (the trackpad keeps natural scrolling), pointer speed beyond the macOS limit, linear movement (acceleration off)
 - Cursor size, shape and color
-- **Side buttons**: Back / Forward like on Windows (or Mission Control, desktops, tabs), with a live preview of which button you pressed
+- **Mouse buttons**: side buttons for Back / Forward like on Windows, middle button for trackpad gestures (Mission Control, app windows, show desktop), with a live preview of which button you pressed
 
 ### Keyboard (PUSAT K3 Pro)
 - Profiles, lighting effect, brightness, speed and direction

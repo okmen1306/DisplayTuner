@@ -56,7 +56,7 @@ DisplayTuner; BetterDisplay, LinearMouse, Razer Synapse, ASUS Armoury Crate ve k
 - Pil seviyesi, logo ve tekerlek ışığı (efekt, renk, parlaklık)
 - Sadece mouse için ters kaydırma (trackpad doğal kalır), macOS sınırının üstünde imleç hızı, doğrusal hareket (ivme kapalı)
 - İmleç boyutu, şekli ve rengi
-- **Yan tuşlar**: Windows'taki gibi Geri / İleri (ya da Mission Control, masaüstleri, sekmeler); hangi tuşa bastığını canlı gösterir
+- **Mouse tuşları**: yan tuşlarla Windows'taki gibi Geri / İleri, orta tuşla trackpad hareketleri (Mission Control, uygulama pencereleri, masaüstünü göster); hangi tuşa bastığını canlı gösterir
 
 ### Klavye (PUSAT K3 Pro)
 - Profiller, ışık efekti, parlaklık, hız ve yön

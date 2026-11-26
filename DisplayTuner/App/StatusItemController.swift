@@ -28,7 +28,7 @@ final class StatusItemController: NSObject {
         Task { [brightness] in await brightness.load() }
         popover.animates = true
         popover.contentViewController = NSHostingController(
-            rootView: QuickPopoverView(brightness: brightness, batteries: services.batteries, profiles: services.profiles, eyeComfort: services.eyeComfort,
+            rootView: QuickPopoverView(brightness: brightness, batteries: services.batteries, profiles: services.profiles, eyeComfort: services.eyeComfort, bluetooth: services.bluetoothBattery,
                                        onOpenDevice: { [weak self] item in
                                            self?.popover.performClose(nil)
                                            self?.mainWindow.show(item)

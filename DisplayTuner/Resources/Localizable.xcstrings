@@ -1082,6 +1082,16 @@
         }
       }
     },
+    "Ekranları sürükleyerek (ya da oklarla) sırala, adını değiştir, panelde gösterip gizle. Ad ve sıra Ekran sayfasında da kullanılır." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drag displays (or use the arrows) to reorder, rename them, and show or hide them in the panel. Names and order are also used on the Display page."
+          }
+        }
+      }
+    },
     "Elektronik" : {
       "localizations" : {
         "en" : {
@@ -1298,6 +1308,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Eye comfort on"
+          }
+        }
+      }
+    },
+    "Göz konforu düğmesi" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eye comfort button"
           }
         }
       }
@@ -1853,6 +1873,16 @@
         }
       }
     },
+    "Masaüstünü göster" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show desktop"
+          }
+        }
+      }
+    },
     "Mavi ışığı azaltıp ekranı sıcak tona çeker. Renk profilinle birlikte çalışır; kısayol ⌃⌥N." : {
       "localizations" : {
         "en" : {
@@ -1869,6 +1899,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Blue gain"
+          }
+        }
+      }
+    },
+    "Menü bar paneli" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu bar panel"
           }
         }
       }
@@ -1904,11 +1944,22 @@
       }
     },
     "Mission Control" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mission Control"
+          }
+        }
+      }
+    },
+    "Mission Control (3 parmak yukarı)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mission Control (3-finger swipe up)"
           }
         }
       }
@@ -1969,6 +2020,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reverse mouse wheel"
+          }
+        }
+      }
+    },
+    "Mouse tuşları" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mouse buttons"
           }
         }
       }
@@ -2079,6 +2140,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Show Samples"
+          }
+        }
+      }
+    },
+    "Orta tuş (tekerleğe bas)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Middle button (wheel click)"
           }
         }
       }
@@ -2704,6 +2775,16 @@
         }
       }
     },
+    "Sürükleyip sırala" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drag to reorder"
+          }
+        }
+      }
+    },
     "Sürüm %@" : {
       "localizations" : {
         "en" : {
@@ -2814,12 +2895,43 @@
         }
       }
     },
+    "Tuş atamalarını kullan" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use button assignments"
+          }
+        }
+      }
+    },
     "Uygulama pencereleri" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "App windows"
+          }
+        }
+      }
+    },
+    "Uygulama pencereleri (3 parmak aşağı)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App windows (3-finger swipe down)"
+          }
+        }
+      }
+    },
+    "Uygulamalar (Launchpad)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apps (Launchpad)"
           }
         }
       }
@@ -2894,7 +3006,18 @@
         }
       }
     },
+    "Windows'taki gibi: arka tuş Geri, ön tuş İleri (Safari, Chrome, Finder, Xcode…). Orta tuşa Mission Control gibi trackpad hareketleri atanabilir. Ters kaydırmayla aynı izni kullanır." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Like on Windows: back button goes Back, front button goes Forward (Safari, Chrome, Finder, Xcode…). The middle button can run trackpad gestures like Mission Control. Uses the same permission as scroll reversal."
+          }
+        }
+      }
+    },
     "Windows'taki gibi: arka tuş Geri, ön tuş İleri (Safari, Chrome, Finder, Xcode…). Ters kaydırmayla aynı izni kullanır." : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2915,6 +3038,7 @@
       }
     },
     "Yan tuşlar" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2935,6 +3059,7 @@
       }
     },
     "Yan tuşları kullan" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

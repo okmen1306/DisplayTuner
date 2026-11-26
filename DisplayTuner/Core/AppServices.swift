@@ -22,6 +22,7 @@ final class AppServices {
     let mouseButtons = MouseButtonMapper()
     let eyeComfort: EyeComfort
     let systemEQ = SystemEQ()
+    let bluetoothBattery = BluetoothBattery()
 
     init(devices: DeviceRegistry, batteries: BatteryMonitor, notifier: Notifier, profiles: ProfileStore) {
         self.devices = devices

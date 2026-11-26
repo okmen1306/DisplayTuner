@@ -46,12 +46,12 @@ struct MousePage: View {
                 }
             }
             Section {
-                Toggle("Yan tuşları kullan", isOn: Binding(get: { buttons.isEnabled }, set: { buttons.isEnabled = $0 }))
+                Toggle("Tuş atamalarını kullan", isOn: Binding(get: { buttons.isEnabled }, set: { buttons.isEnabled = $0 }))
                 MouseSideButtonsView(buttons: buttons)
             } header: {
-                Text("Yan tuşlar")
+                Text("Mouse tuşları")
             } footer: {
-                Text("Windows'taki gibi: arka tuş Geri, ön tuş İleri (Safari, Chrome, Finder, Xcode…). Ters kaydırmayla aynı izni kullanır.")
+                Text("Windows'taki gibi: arka tuş Geri, ön tuş İleri (Safari, Chrome, Finder, Xcode…). Orta tuşa Mission Control gibi trackpad hareketleri atanabilir. Ters kaydırmayla aynı izni kullanır.")
             }
 
             Section("İmleç") {

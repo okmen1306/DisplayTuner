@@ -19,6 +19,8 @@ final class BrightnessModel {
         let name: String
         var value: Double
         var maximum: Int
+        /// PopoverLayout anahtarı (D-161).
+        var key: String { id == .builtin ? "builtin" : "monitor" }
     }
 
     private(set) var rows: [Row] = []
@@ -86,16 +88,17 @@ final class BrightnessModel {
 
 struct BrightnessRow: View {
     let row: BrightnessModel.Row
+    var title: String? = nil
     let onChange: (Double) -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: Theme.Spacing.xs) {
-            Text(row.name)
+            Text(title ?? row.name)
                 .font(.subheadline.weight(.semibold))
             HStack(spacing: Theme.Spacing.s) {
                 Image(systemName: "sun.min.fill").foregroundStyle(.secondary)
                 Slider(value: Binding(get: { row.value }, set: onChange), in: 0...1)
-                    .accessibilityLabel(String(localized: "\(row.name) parlaklığı"))
+                    .accessibilityLabel(String(localized: "\(title ?? row.name) parlaklığı"))
                 Image(systemName: "sun.max.fill").foregroundStyle(.secondary)
             }
         }

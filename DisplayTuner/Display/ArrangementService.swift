@@ -32,10 +32,14 @@ enum ArrangementService {
         NSScreen.screens.compactMap { screen -> Display? in
             guard let number = screen.deviceDescription[NSDeviceDescriptionKey("NSScreenNumber")] as? NSNumber else { return nil }
             let id = CGDirectDisplayID(number.uint32Value)
-            let name = CGDisplayIsBuiltin(id) != 0 ? String(localized: "MacBook ekranı") : screen.localizedName
-            return Display(id: id, name: name)
+            let fallback = CGDisplayIsBuiltin(id) != 0 ? String(localized: "MacBook ekranı") : screen.localizedName
+            // D-161: Ayarlar'da verilen özel ad ve sıra her yerde kullanılır.
+            return Display(id: id, name: PopoverLayout.shared.name(PopoverLayout.key(for: id), fallback: fallback))
         }
-        .sorted { ($0.isBuiltin ? 1 : 0, $0.name) < ($1.isBuiltin ? 1 : 0, $1.name) }
+        .sorted { a, b in
+            let order = PopoverLayout.shared.sorted([PopoverLayout.key(for: a.id), PopoverLayout.key(for: b.id)])
+            return order.first == PopoverLayout.key(for: a.id)
+        }
     }
 
     /// Seçilen ekranı ana ekran yapar ve tercihi saklar (monitör takılınca hangisi ana olsun, D-41/D-150).

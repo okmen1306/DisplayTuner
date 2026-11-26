@@ -19,15 +19,21 @@ import os
 @Observable
 final class MouseButtonMapper {
     enum Action: String, CaseIterable, Identifiable, Sendable {
-        case back, forward, missionControl, appExpose, prevSpace, nextSpace, closeTab, newTab, none
+        case back, forward, missionControl, appExpose, showDesktop, launchpad, prevSpace, nextSpace, closeTab, newTab, none
         var id: String { rawValue }
+
+        /// Orta tuş için anlamlı olanlar önce (hareketler).
+        static let gestureFirst: [Action] = [.none, .missionControl, .appExpose, .showDesktop, .launchpad,
+                                             .prevSpace, .nextSpace, .back, .forward, .closeTab, .newTab]
 
         var title: String {
             switch self {
             case .back: String(localized: "Geri")
             case .forward: String(localized: "İleri")
-            case .missionControl: String(localized: "Mission Control")
-            case .appExpose: String(localized: "Uygulama pencereleri")
+            case .missionControl: String(localized: "Mission Control (3 parmak yukarı)")
+            case .appExpose: String(localized: "Uygulama pencereleri (3 parmak aşağı)")
+            case .showDesktop: String(localized: "Masaüstünü göster")
+            case .launchpad: String(localized: "Uygulamalar (Launchpad)")
             case .prevSpace: String(localized: "Önceki masaüstü")
             case .nextSpace: String(localized: "Sonraki masaüstü")
             case .closeTab: String(localized: "Sekmeyi kapat")
@@ -41,8 +47,7 @@ final class MouseButtonMapper {
             switch self {
             case .back: (CGKeyCode(kVK_ANSI_LeftBracket), .maskCommand)
             case .forward: (CGKeyCode(kVK_ANSI_RightBracket), .maskCommand)
-            case .missionControl: (CGKeyCode(kVK_UpArrow), .maskControl)
-            case .appExpose: (CGKeyCode(kVK_DownArrow), .maskControl)
+            case .missionControl, .appExpose, .showDesktop, .launchpad: nil   // uygulama başlatılarak (bkz. run)
             case .prevSpace: (CGKeyCode(kVK_LeftArrow), .maskControl)
             case .nextSpace: (CGKeyCode(kVK_RightArrow), .maskControl)
             case .closeTab: (CGKeyCode(kVK_ANSI_W), .maskCommand)
@@ -50,6 +55,33 @@ final class MouseButtonMapper {
             case .none: nil
             }
         }
+
+        /// Klavye kısayolu ayarlarından bağımsız çalışsın diye Mission Control doğrudan başlatılır
+        /// (argüman 1 = masaüstünü göster, 2 = uygulama pencereleri).
+        nonisolated func run() {
+            if let (key, flags) = shortcut { MouseButtonMapper.post(key: key, flags: flags); return }
+            let mc = "/System/Applications/Mission Control.app/Contents/MacOS/Mission Control"
+            switch self {
+            case .missionControl: Self.launch(mc, [])
+            case .appExpose: Self.launch(mc, ["2"])
+            case .showDesktop: Self.launch(mc, ["1"])
+            case .launchpad:
+                for path in ["/System/Applications/Launchpad.app", "/System/Applications/Apps.app"]
+                where FileManager.default.fileExists(atPath: path) {
+                    Self.launch("/usr/bin/open", [path]); return
+                }
+            default: break
+            }
+        }
+
+        private nonisolated static func launch(_ path: String, _ args: [String]) {
+            let p = Process()
+            p.executableURL = URL(fileURLWithPath: path)
+            p.arguments = args
+            try? p.run()
+        }
+
+        var isRunnable: Bool { self != .none }
     }
 
     private let defaults = UserDefaults.standard
@@ -61,6 +93,8 @@ final class MouseButtonMapper {
     /// Tuş 3 (genelde arka yan tuş) ve tuş 4 (ön yan tuş).
     var button3: Action { didSet { defaults.set(button3.rawValue, forKey: "sideButtons.b3"); publish() } }
     var button4: Action { didSet { defaults.set(button4.rawValue, forKey: "sideButtons.b4"); publish() } }
+    /// Orta tuş (tekerleğe basma). Varsayılan: değiştirme (normal orta tık).
+    var button2: Action { didSet { defaults.set(button2.rawValue, forKey: "sideButtons.b2"); publish() } }
     /// Ayarlar sayfasında "tuşa bas" testi için son basılan tuş.
     private(set) var lastPressed: Int?
     /// Her basışta artar (önizlemede tuşu yakmak için).
@@ -78,6 +112,7 @@ final class MouseButtonMapper {
         isEnabled = defaults.object(forKey: "sideButtons.enabled") as? Bool ?? true
         button3 = Action(rawValue: defaults.string(forKey: "sideButtons.b3") ?? "") ?? .back
         button4 = Action(rawValue: defaults.string(forKey: "sideButtons.b4") ?? "") ?? .forward
+        button2 = Action(rawValue: defaults.string(forKey: "sideButtons.b2") ?? "") ?? .none
         publish()
     }
 
@@ -85,6 +120,7 @@ final class MouseButtonMapper {
         var map: [Int64: Action] = [:]
         if button3 != .none { map[3] = button3 }
         if button4 != .none { map[4] = button4 }
+        if button2 != .none { map[2] = button2 }
         Self.mapping = map
     }
 
@@ -111,15 +147,18 @@ final class MouseButtonMapper {
                 return Unmanaged.passUnretained(event)
             }
             let button = event.getIntegerValueField(.mouseEventButtonNumber)
+            if type == .otherMouseDown {
+                Logger(subsystem: "com.muhammed.DisplayTuner", category: "Buttons").info("mouse tuşu: \(button)")
+            }
             if type == .otherMouseDown, let refcon {
                 let mapper = Unmanaged<MouseButtonMapper>.fromOpaque(refcon).takeUnretainedValue()
                 MainActor.assumeIsolated { mapper.lastPressed = Int(button); mapper.pressTick += 1 }
             }
-            guard let action = MouseButtonMapper.mapping[button], let (key, flags) = action.shortcut else {
+            guard let action = MouseButtonMapper.mapping[button] else {
                 return Unmanaged.passUnretained(event)
             }
             if type == .otherMouseDown {
-                MouseButtonMapper.post(key: key, flags: flags)
+                action.run()
             }
             return nil   // atanmış tuşun orijinal olayı yutulur
         }, userInfo: Unmanaged.passUnretained(self).toOpaque()) else {

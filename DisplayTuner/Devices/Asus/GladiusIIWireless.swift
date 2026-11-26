@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import os
 
 actor GladiusIIWireless: BatteryReporting {
     static let vendorID = 0x0B05
@@ -22,6 +23,11 @@ actor GladiusIIWireless: BatteryReporting {
     init?() {
         guard let device = HIDDeviceMatcher.find(vendorID: Self.vendorID, productID: Self.productID, usagePage: Self.usagePage),
               let transport = HIDTransport(device: device, label: "asus") else { return nil }
+        // D-162: DPI tuşu gibi kendiliğinden gelen raporları kaydet (tuş atama için hangi rapor geldiğini görmek).
+        let log = Logger(subsystem: "com.muhammed.DisplayTuner", category: "AsusReport")
+        transport.onReport = { report in
+            log.info("asus rapor: \(report.prefix(16).map { String(format: "%02X", $0) }.joined(separator: " "), privacy: .public)")
+        }
         self.transport = transport
     }
 

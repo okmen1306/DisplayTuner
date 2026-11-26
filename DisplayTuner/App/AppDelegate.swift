@@ -49,6 +49,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         services.mouseButtons.startIfEnabled()
         services.eyeComfort.start()
         services.systemEQ.start()
+        services.bluetoothBattery.start { [services] in
+            let output = services.systemEQ.output
+            return (output?.isBluetooth == true, output?.name)
+        }
         if UserDefaults.standard.object(forKey: "pointerSpeed") != nil { services.pointer.apply() }
         services.cursor.applySaved()
         if services.cursorAppearance.shape != .system { services.cursorAppearance.apply() }

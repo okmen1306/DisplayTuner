@@ -39,6 +39,8 @@ struct SettingsPage: View {
                 Text("Dil değişince uygulama yeniden başlar.")
             }
 
+            menuBarSection
+
             Section("Genel") {
                 Toggle(isOn: Binding(get: { launchAtLogin }, set: { on in
                     do {
@@ -67,6 +69,66 @@ struct SettingsPage: View {
             }
         }
         .formStyle(.grouped)
+    }
+
+    // MARK: Menü bar paneli (D-161)
+
+    @State private var dragging: String?
+    private var layout: PopoverLayout { PopoverLayout.shared }
+
+    private var displayKeys: [String] {
+        let connected = ArrangementService.displays().map { PopoverLayout.key(for: $0.id) }
+        return layout.sorted(Array(Set(["builtin", "monitor"] + connected)))
+    }
+
+    private var menuBarSection: some View {
+        Section {
+            ForEach(displayKeys, id: \.self) { key in
+                HStack(spacing: 10) {
+                    Image(systemName: "line.3.horizontal").foregroundStyle(.tertiary)
+                        .help("Sürükleyip sırala")
+                    Image(systemName: key == "builtin" ? "laptopcomputer" : "display")
+                        .frame(width: 22).foregroundStyle(Color.accentColor)
+                    TextField(text: Binding(get: { layout.names[key] ?? "" }, set: { layout.rename(key, to: $0) }),
+                              prompt: Text(PopoverLayout.defaultName(key))) { EmptyView() }
+                        .labelsHidden()
+                        .textFieldStyle(.roundedBorder)
+                        .frame(maxWidth: 240)
+                    Spacer()
+                    Button { step(key, -1) } label: { Image(systemName: "chevron.up") }
+                        .buttonStyle(.borderless).disabled(displayKeys.first == key)
+                    Button { step(key, 1) } label: { Image(systemName: "chevron.down") }
+                        .buttonStyle(.borderless).disabled(displayKeys.last == key)
+                    Toggle("", isOn: Binding(get: { layout.isVisible(key) }, set: { layout.setVisible(key, $0) }))
+                        .labelsHidden().toggleStyle(.switch)
+                }
+                .padding(.vertical, 2)
+                .opacity(dragging == key ? 0.4 : 1)
+                .contentShape(Rectangle())
+                .draggable(key) { Label(layout.name(key), systemImage: "display").padding(6) }
+                .dropDestination(for: String.self) { items, _ in
+                    guard let moved = items.first else { return false }
+                    withAnimation { layout.move(moved, onto: key, in: displayKeys) }
+                    return true
+                } isTargeted: { on in if on { dragging = nil } }
+            }
+            Toggle(isOn: Binding(get: { layout.showEyeComfort }, set: { layout.showEyeComfort = $0 })) {
+                Label("Göz konforu düğmesi", systemImage: "moon.stars")
+            }
+            Toggle(isOn: Binding(get: { layout.showBatteries }, set: { layout.showBatteries = $0 })) {
+                Label("Pil durumu", systemImage: "battery.75percent")
+            }
+        } header: {
+            Text("Menü bar paneli")
+        } footer: {
+            Text("Ekranları sürükleyerek (ya da oklarla) sırala, adını değiştir, panelde gösterip gizle. Ad ve sıra Ekran sayfasında da kullanılır.")
+        }
+    }
+
+    private func step(_ key: String, _ delta: Int) {
+        let keys = displayKeys
+        guard let i = keys.firstIndex(of: key), keys.indices.contains(i + delta) else { return }
+        withAnimation { layout.move(key, onto: keys[i + delta], in: keys) }
     }
 
     private func appearanceTile(_ option: AppAppearance) -> some View {
