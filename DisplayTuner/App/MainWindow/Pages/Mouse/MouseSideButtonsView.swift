@@ -21,6 +21,7 @@ struct MouseSideButtonsView: View {
                           options: MouseButtonMapper.Action.gestureFirst)
                 buttonRow(number: 4, title: String(localized: "Ön yan tuş"), selection: $buttons.button4, color: .blue)
                 buttonRow(number: 3, title: String(localized: "Arka yan tuş"), selection: $buttons.button3, color: .purple)
+                dpiRow
                 Text(buttons.isEnabled
                      ? String(localized: "Bir yan tuşa bas: çizimde yanar, hangisi olduğunu görürsün.")
                      : String(localized: "Yan tuşlar kapalı; mouse tuşları macOS'un varsayılanıyla çalışır."))
@@ -59,6 +60,12 @@ struct MouseSideButtonsView: View {
                 .shadow(color: lit == 2 ? .orange : .clear, radius: 10)
                 .scaleEffect(lit == 2 ? 1.15 : 1)
                 .frame(width: 12, height: 30).offset(x: 12, y: -64)
+            // DPI tuşu (tekerleğin arkasında); mouse'un kendi içinde DPI değiştirir
+            RoundedRectangle(cornerRadius: 3, style: .continuous)
+                .fill(LinearGradient(colors: [Color(white: 0.45), Color(white: 0.25)], startPoint: .top, endPoint: .bottom))
+                .overlay(RoundedRectangle(cornerRadius: 3, style: .continuous).strokeBorder(Color.green.opacity(0.75), lineWidth: 1.5))
+                .frame(width: 14, height: 18)
+                .offset(x: 12, y: -30)
             // ROG logosu yerine ince ışık şeridi
             Capsule().fill(LinearGradient(colors: [.red.opacity(0.8), .pink.opacity(0.6)], startPoint: .top, endPoint: .bottom))
                 .frame(width: 4, height: 34).offset(x: 12, y: 40).blur(radius: 0.6)
@@ -76,6 +83,22 @@ struct MouseSideButtonsView: View {
             .overlay(RoundedRectangle(cornerRadius: 6, style: .continuous).strokeBorder(color.opacity(on ? 1 : 0.7), lineWidth: 2))
             .shadow(color: on ? color.opacity(0.9) : .clear, radius: on ? 10 : 0)
             .scaleEffect(on ? 1.12 : 1)
+    }
+
+    /// D-162: DPI tuşu Mac'e olay göndermiyor (iki kayıtta da hiçbir arayüzden gelmedi); mouse kendi içinde DPI değiştirir.
+    /// Atanabilmesi için mouse'un tuş haritasının yazılması gerekiyor (51 21 … E6 → F18); kullanıcı sonraya bıraktı.
+    private var dpiRow: some View {
+        HStack(spacing: 10) {
+            Circle().fill(Color.green).frame(width: 10, height: 10)
+            VStack(alignment: .leading, spacing: 4) {
+                Text("DPI tuşu").font(.callout.weight(.semibold))
+                Text("DPI değiştirir (mouse'un kendi içinde)").font(.callout).foregroundStyle(.secondary)
+                Text("Atama yakında: mouse'un tuş ayarı yazılınca bu tuşa da eylem verilebilecek.")
+                    .font(.caption).foregroundStyle(.tertiary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .padding(8)
     }
 
     private func buttonRow(number: Int, title: String, selection: Binding<MouseButtonMapper.Action>, color: Color,

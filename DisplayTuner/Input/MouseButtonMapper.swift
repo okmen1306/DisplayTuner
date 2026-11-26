@@ -56,29 +56,38 @@ final class MouseButtonMapper {
             }
         }
 
-        /// Klavye kısayolu ayarlarından bağımsız çalışsın diye Mission Control doğrudan başlatılır
-        /// (argüman 1 = masaüstünü göster, 2 = uygulama pencereleri).
+        /// D-163: Mission Control vb. Dock'a doğrudan bildirimle açılır (BetterTouchTool'un yolu);
+        /// klavye kısayolu ayarlarından bağımsızdır. Mission Control ikilisini başlatmak bu macOS'ta çalışmıyordu.
         nonisolated func run() {
             if let (key, flags) = shortcut { MouseButtonMapper.post(key: key, flags: flags); return }
-            let mc = "/System/Applications/Mission Control.app/Contents/MacOS/Mission Control"
             switch self {
-            case .missionControl: Self.launch(mc, [])
-            case .appExpose: Self.launch(mc, ["2"])
-            case .showDesktop: Self.launch(mc, ["1"])
+            case .missionControl: Self.dock("com.apple.expose.awake")
+            case .appExpose: Self.dock("com.apple.expose.front.awake")
+            case .showDesktop: Self.dock("com.apple.showdesktop.awake")
             case .launchpad:
-                for path in ["/System/Applications/Launchpad.app", "/System/Applications/Apps.app"]
-                where FileManager.default.fileExists(atPath: path) {
-                    Self.launch("/usr/bin/open", [path]); return
+                if !Self.dock("com.apple.launchpad.toggle") || FileManager.default.fileExists(atPath: "/System/Applications/Apps.app") {
+                    let p = Process()
+                    p.executableURL = URL(fileURLWithPath: "/usr/bin/open")
+                    p.arguments = [FileManager.default.fileExists(atPath: "/System/Applications/Apps.app")
+                                   ? "/System/Applications/Apps.app" : "/System/Applications/Launchpad.app"]
+                    try? p.run()
                 }
             default: break
             }
         }
 
-        private nonisolated static func launch(_ path: String, _ args: [String]) {
-            let p = Process()
-            p.executableURL = URL(fileURLWithPath: path)
-            p.arguments = args
-            try? p.run()
+        private typealias DockNotify = @convention(c) (CFString, UnsafeMutableRawPointer?) -> Void
+        nonisolated(unsafe) private static let dockNotify: DockNotify? = {
+            let handle = dlopen("/System/Library/Frameworks/ApplicationServices.framework/ApplicationServices", RTLD_LAZY)
+            guard let symbol = dlsym(handle, "CoreDockSendNotification") else { return nil }
+            return unsafeBitCast(symbol, to: DockNotify.self)
+        }()
+
+        @discardableResult
+        private nonisolated static func dock(_ name: String) -> Bool {
+            guard let dockNotify else { return false }
+            dockNotify(name as CFString, nil)
+            return true
         }
 
         var isRunnable: Bool { self != .none }
@@ -147,9 +156,6 @@ final class MouseButtonMapper {
                 return Unmanaged.passUnretained(event)
             }
             let button = event.getIntegerValueField(.mouseEventButtonNumber)
-            if type == .otherMouseDown {
-                Logger(subsystem: "com.muhammed.DisplayTuner", category: "Buttons").info("mouse tuşu: \(button)")
-            }
             if type == .otherMouseDown, let refcon {
                 let mapper = Unmanaged<MouseButtonMapper>.fromOpaque(refcon).takeUnretainedValue()
                 MainActor.assumeIsolated { mapper.lastPressed = Int(button); mapper.pressTick += 1 }

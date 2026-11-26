@@ -454,6 +454,16 @@
         }
       }
     },
+    "Atama yakında: mouse'un tuş ayarı yazılınca bu tuşa da eylem verilebilecek." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coming soon: once the mouse's button map is written, this button can get an action too."
+          }
+        }
+      }
+    },
     "Ayak Sesi" : {
       "localizations" : {
         "en" : {
@@ -958,6 +968,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Saturation"
+          }
+        }
+      }
+    },
+    "DPI değiştirir (mouse'un kendi içinde)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Changes DPI (inside the mouse)"
+          }
+        }
+      }
+    },
+    "DPI tuşu" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DPI button"
           }
         }
       }

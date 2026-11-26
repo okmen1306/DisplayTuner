@@ -23,11 +23,6 @@ actor GladiusIIWireless: BatteryReporting {
     init?() {
         guard let device = HIDDeviceMatcher.find(vendorID: Self.vendorID, productID: Self.productID, usagePage: Self.usagePage),
               let transport = HIDTransport(device: device, label: "asus") else { return nil }
-        // D-162: DPI tuşu gibi kendiliğinden gelen raporları kaydet (tuş atama için hangi rapor geldiğini görmek).
-        let log = Logger(subsystem: "com.muhammed.DisplayTuner", category: "AsusReport")
-        transport.onReport = { report in
-            log.info("asus rapor: \(report.prefix(16).map { String(format: "%02X", $0) }.joined(separator: " "), privacy: .public)")
-        }
         self.transport = transport
     }
 
@@ -66,6 +61,14 @@ actor GladiusIIWireless: BatteryReporting {
 
     /// `50 03` — ayarları mouse hafızasına kaydeder (D-65: debounce ile çağrılır).
     @discardableResult
+    /// D-162: tuş atamaları (okuma). Cevap: [4+2i]=eylem kodu, [5+2i]=tür (0 tuş, 1 mouse tuşu), 8 tuş.
+    func readButtonBindings() async -> [(code: UInt8, type: UInt8)]? {
+        var request = [UInt8](repeating: 0, count: 64)
+        request[0] = 0x12; request[1] = 0x05
+        guard let reply = await send(request), reply.count >= 20 else { return nil }
+        return (0..<8).map { (reply[4 + 2 * $0], reply[5 + 2 * $0]) }
+    }
+
     func saveToFlash() async -> Bool {
         await send([0x50, 0x03]) != nil
     }
